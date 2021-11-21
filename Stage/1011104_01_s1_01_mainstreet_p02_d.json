@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,21 +21,89 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead1-2"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead1-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
             "WaitExecuteEnd": false
           }
         ]
@@ -57,20 +125,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 1
+              "ConditionID": ""
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 11,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 100,
-              "CommandID": 13,
+              "CommandID": "CommandSpawn1-1",
               "WaitExecuteEnd": false
             }
           ]
@@ -82,61 +144,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 911
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 913
+              "ConditionID": "ConditionDead1-1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 12,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "DestroyObstacle",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 913
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
-              "CommandID": 1000,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "EndBattle",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 912
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 913
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
-              "BattleEndType": 4,
-              "CommandID": 0,
+              "CommandID": "CommandSpawn1-2",
               "WaitExecuteEnd": false
             }
           ]
@@ -146,9 +161,9 @@
         {
           "UniqueName": "Common_CarOrange",
           "Position": {
-            "x": -0.86,
+            "x": -3.12,
             "y": 0,
-            "z": 8.15
+            "z": 13.15
           },
           "Forward": {
             "x": 0.160914451,
@@ -166,35 +181,11 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Common_CarWhite",
-          "Position": {
-            "x": 2.45,
-            "y": 0,
-            "z": 13.55
-          },
-          "Forward": {
-            "x": -0.221888855,
-            "y": 0,
-            "z": 0.975071967
-          },
-          "ActiveEnemyPointIndices": [
-            5
-          ],
-          "ActivePlayerPointIndices": [
-            4
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [
-            1000
-          ],
-          "SubObstacles": []
-        },
-        {
           "UniqueName": "Common_VanBlue",
           "Position": {
             "x": -3.13,
             "y": 0,
-            "z": 20.68
+            "z": 25.68
           },
           "Forward": {
             "x": 0.08541684,
@@ -212,11 +203,35 @@
           "SubObstacles": []
         },
         {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 2.45,
+            "y": 0,
+            "z": 18.55
+          },
+          "Forward": {
+            "x": -0.221888855,
+            "y": 0,
+            "z": 0.975071967
+          },
+          "ActiveEnemyPointIndices": [
+            5
+          ],
+          "ActivePlayerPointIndices": [
+            4
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "1000"
+          ],
+          "SubObstacles": []
+        },
+        {
           "UniqueName": "Common_VanBlue",
           "Position": {
             "x": -0.26,
             "y": 0,
-            "z": 26.83
+            "z": 31.83
           },
           "Forward": {
             "x": -0.879648447,
@@ -243,18 +258,16 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "ConditionDead1-1"
               ],
-              "SpawnCommandIdList": [
-                11
-              ],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 40,
-              "TileY": 87,
+              "TileX": 36,
+              "TileY": 88,
               "PositionHeight": 0,
               "Position": {
-                "x": 0,
-                "y": 12.9
+                "x": -0.84,
+                "y": 13.06
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -262,7 +275,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "CommandSpawn1-1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -278,18 +291,16 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "ConditionDead1-1"
               ],
-              "SpawnCommandIdList": [
-                11
-              ],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 28,
+              "TileX": 49,
               "TileY": 88,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.31,
-                "y": 13
+                "x": 1.721,
+                "y": 13.18
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -297,7 +308,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "CommandSpawn1-1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -307,24 +318,22 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_YohekiPink_AR_E",
+                "SpawnTemplateId": "Soldier_Yoheki_AR_M",
                 "AIId": 0,
                 "AppearAction": false
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "ConditionDead1-1"
               ],
-              "SpawnCommandIdList": [
-                11
-              ],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 36,
-              "TileY": 101,
+              "TileX": 42,
+              "TileY": 100,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.74,
-                "y": 15.75
+                "x": 0.3,
+                "y": 15.44
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -332,7 +341,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "CommandSpawn1-1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -342,24 +351,55 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_YohekiPink_AR_E",
+                "SpawnTemplateId": "Soldier_Yoheki_AR_M",
                 "AIId": 0,
                 "AppearAction": false
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                913
+                "ConditionDead1-1"
               ],
-              "SpawnCommandIdList": [
-                13
-              ],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 49,
+              "TileY": 100,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.88,
+                "y": 15.43
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Yoheki_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDead1-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 33,
               "TileY": 98,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.70597458,
-                "y": 15.16107
+                "x": -1.44,
+                "y": 15.06
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -367,7 +407,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                13
+                "CommandSpawn1-1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -388,18 +428,18 @@
               },
               "SpawnAIGroupId": "B",
               "SpawnConditionIdList": [
-                912
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
-              "TileX": 39,
+              "TileX": 43,
               "TileY": 123,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.2,
-                "y": 20
+                "x": 0.52,
+                "y": 20.02
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -407,7 +447,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "CommandSpawn1-2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -423,17 +463,17 @@
               },
               "SpawnAIGroupId": "B",
               "SpawnConditionIdList": [
-                912
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
-              "TileX": 48,
+              "TileX": 37,
               "TileY": 123,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.694,
+                "x": -0.66,
                 "y": 20
               },
               "Direction": {
@@ -442,7 +482,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "CommandSpawn1-2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -452,24 +492,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_YohekiPink_AR_E",
+                "SpawnTemplateId": "Soldier_Yoheki_AR_E",
                 "AIId": 0,
                 "AppearAction": false
               },
               "SpawnAIGroupId": "B",
               "SpawnConditionIdList": [
-                912
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
-              "TileX": 38,
-              "TileY": 136,
+              "TileX": 41,
+              "TileY": 134,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.33,
-                "y": 22.61
+                "x": 0.2,
+                "y": 22.22
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -477,7 +517,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "CommandSpawn1-2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -487,24 +527,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_YohekiPink_AR_E",
+                "SpawnTemplateId": "Soldier_Yoheki_AR_M",
                 "AIId": 0,
                 "AppearAction": false
               },
               "SpawnAIGroupId": "B",
               "SpawnConditionIdList": [
-                912
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
-              "TileX": 28,
-              "TileY": 164,
+              "TileX": 47,
+              "TileY": 133,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.34,
-                "y": 28.21
+                "x": 1.36,
+                "y": 22.09
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -512,7 +552,42 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [
+                "12"
+              ],
+              "MovePoints": [],
+              "TileX": 29,
+              "TileY": 137,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.22,
+                "y": 22.99
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -586,5 +661,103 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 13
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 20
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 33
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 40
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 53
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-2Area",
+      "Radius": 1500,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 57
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
 }

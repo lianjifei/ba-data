@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,21 +21,24 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
-            "ID": 1,
+            "ID": 10,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -57,14 +60,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 1
+              "ConditionID": "1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 11,
+              "CommandID": "11",
               "WaitExecuteEnd": false
             }
           ]
@@ -76,14 +79,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 911
+              "ConditionID": "911"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 12,
+              "CommandID": "12",
               "WaitExecuteEnd": false
             }
           ]
@@ -95,14 +98,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 911
+              "ConditionID": "911"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 4,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -122,26 +125,26 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                11
+                "11"
               ],
               "MovePoints": [],
-              "TileX": 50,
-              "TileY": 221,
+              "TileX": 43,
+              "TileY": 223,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.97,
-                "y": 39.78
+                "x": 0.53,
+                "y": 40.01
               },
               "Direction": {
-                "x": 0.08715568,
+                "x": 0.0871557,
                 "y": -0.9961947
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -157,18 +160,18 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                11
+                "11"
               ],
               "MovePoints": [],
-              "TileX": 44,
+              "TileX": 35,
               "TileY": 222,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.8,
-                "y": 39.8999977
+                "x": -0.91,
+                "y": 39.96
               },
               "Direction": {
                 "x": -0.06975664,
@@ -176,7 +179,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -192,26 +195,26 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                11
+                "11"
               ],
               "MovePoints": [],
-              "TileX": 53,
-              "TileY": 224,
+              "TileX": 43,
+              "TileY": 230,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.63,
-                "y": 40.39
+                "x": 0.59,
+                "y": 41.4
               },
               "Direction": {
-                "x": -0.0523359664,
+                "x": -0.0523359552,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -227,18 +230,18 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                11
+                "11"
               ],
               "MovePoints": [],
-              "TileX": 39,
-              "TileY": 225,
+              "TileX": 38,
+              "TileY": 229,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.23,
-                "y": 40.41
+                "x": -0.47,
+                "y": 41.3500023
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -246,7 +249,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -262,18 +265,18 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                11
+                "11"
               ],
               "MovePoints": [],
-              "TileX": 47,
-              "TileY": 227,
+              "TileX": 31,
+              "TileY": 229,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.43,
-                "y": 40.96
+                "x": -1.82,
+                "y": 41.38
               },
               "Direction": {
                 "x": -0.06975664,
@@ -281,7 +284,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -299,7 +302,7 @@
       "IgnorePathFind": false,
       "Index": 0,
       "Position": {
-        "x": 1.06,
+        "x": -2.55,
         "y": 27.06
       },
       "Forward": {
@@ -325,5 +328,6 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": []
 }

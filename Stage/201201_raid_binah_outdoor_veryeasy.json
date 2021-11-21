@@ -1,5 +1,5 @@
 {
-  "Version": "1.2",
+  "Version": "1.35",
   "Global": {
     "Position": {
       "x": 1.74,
@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,12 +21,15 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 3,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [
               {
                 "UseTableData": false,
@@ -44,14 +47,185 @@
                 }
               }
             ],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1phaseArea",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "Binah"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1AreaOff",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+            "Phase": 1,
+            "ConditionID": "Binah"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1phaseArea",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1AreaOff",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+            "Phase": 2,
+            "ConditionID": "Binah"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1phaseArea",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+            "Phase": 1,
+            "ConditionID": "Binah"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 10.58,
+              "y": 0,
+              "z": -13.6
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 8,
+              "Height": 8
+            },
+            "Circle": {
+              "Radius": 11.5
+            },
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2phaseArea",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2AreaOff",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+            "Phase": 2,
+            "ConditionID": "Binah"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2phaseArea",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "SetImmuneOff",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 0,
+            "Target": 1,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 7.68999958,
+              "y": 0,
+              "z": -3.30700016
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 0.5,
+              "Height": 0.5
+            },
+            "Circle": {
+              "Radius": 1
+            },
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+            "heroStatus": "ImmuneGroggyGaugeAdd",
+            "isAdd": false,
+            "CommandID": "Binah",
             "WaitExecuteEnd": false
           }
         ]
@@ -73,116 +247,59 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": 10,
+              "CommandID": "CommandSpawnBinah",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "1-bPhaseChanged",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
-              "Phase": 2,
-              "ConditionID": 10
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
-              "SectionID": 3,
-              "SetConditionCommandOnly": false,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
-              "ID": 5,
-              "RailPoints": [
-                {
-                  "UseTableData": false,
-                  "Position": {
-                    "x": 19.75,
-                    "y": 0,
-                    "z": -91.26
-                  },
-                  "MinCameraDistance": 68.9,
-                  "MaxCameraDistance": 68.9,
-                  "CameraForward": {
-                    "x": -0.6452334,
-                    "y": -0.416742235,
-                    "z": 0.640312254
-                  }
-                }
-              ],
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
-              "IsInstantMove": true,
-              "IsInterruptCurrentAction": true,
-              "PointCommandID": 13,
-              "IsCommandWaitForMoveStart": false,
-              "IsCommandWaitForMoveEnd": false,
-              "CommandID": 10,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
-              "IsInstantMove": true,
-              "IsInterruptCurrentAction": true,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
-              "DelayBeforeFadeOut": 0,
-              "DelayBeforeFadeIn": 0.01,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "1-aPhaseChanged",
+          "EventName": "0->1PhaseChanged",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
               "Phase": 1,
-              "ConditionID": 10
+              "ConditionID": "Binah"
             }
           ],
           "Commands": [
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneGroggyGaugeAdd",
+              "isAdd": true,
+              "CommandID": "Binah",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 2,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "PointCommandID": 12,
+              "PointCommandID": "1PhaseBinahPoint",
               "IsCommandWaitForMoveStart": true,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 10,
+              "CommandID": "Binah",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandLocateCamera, Assembly-CSharp",
               "ID": 4,
+              "MaxCameraSpeed": 3,
+              "RotationSpeed": 1,
+              "ZoomSpeed": 1,
               "RailPoints": [
                 {
                   "UseTableData": false,
@@ -260,33 +377,41 @@
                   }
                 }
               ],
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "EndBattle",
+          "EventName": "0->2PhaseChanged",
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 10
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "Phase": 2,
+              "ConditionID": "Binah"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
-              "BattleEndType": 4,
-              "CommandID": 0,
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "SectionID": 3,
+              "SetConditionCommandOnly": false,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "DelayBeforeFadeOut": 0,
+              "DelayBeforeFadeIn": 0.01,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -415,9 +540,9 @@
             "z": -5.78700066
           },
           "Forward": {
-            "x": 0.245364636,
+            "x": 0.24538821,
             "y": 0,
-            "z": -0.969430864
+            "z": -0.9694249
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -455,9 +580,9 @@
             "z": -4.31700134
           },
           "Forward": {
-            "x": 0.6060403,
+            "x": 0.606057942,
             "y": 0,
-            "z": -0.795433939
+            "z": -0.795420468
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -715,10 +840,10 @@
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                10
+                "Binah"
               ],
               "SpawnCommandIdList": [
-                10
+                "Binah"
               ],
               "MovePoints": [],
               "TileX": 102,
@@ -734,7 +859,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                10
+                "CommandSpawnBinah"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -754,13 +879,13 @@
       },
       "Events": [
         {
-          "EventName": "1-bPhaseChanged",
+          "EventName": "1->2PhaseChanged",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
               "Phase": 2,
-              "ConditionID": 10
+              "ConditionID": "Binah"
             }
           ],
           "Commands": [
@@ -768,73 +893,14 @@
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 3,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
-              "ID": 5,
-              "RailPoints": [
-                {
-                  "UseTableData": false,
-                  "Position": {
-                    "x": 19.75,
-                    "y": 0,
-                    "z": -91.26
-                  },
-                  "MinCameraDistance": 68.9,
-                  "MaxCameraDistance": 68.9,
-                  "CameraForward": {
-                    "x": -0.6452334,
-                    "y": -0.416742235,
-                    "z": 0.640312254
-                  }
-                }
-              ],
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
-              "IsInstantMove": true,
-              "IsInterruptCurrentAction": true,
-              "PointCommandID": 13,
-              "IsCommandWaitForMoveStart": false,
-              "IsCommandWaitForMoveEnd": false,
-              "CommandID": 10,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
-              "IsInstantMove": true,
-              "IsInterruptCurrentAction": true,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 0.01,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "EndBattle",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 10
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
-              "BattleEndType": 4,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -987,9 +1053,9 @@
             "z": -17.5070038
           },
           "Forward": {
-            "x": 0.413161,
+            "x": 0.41318208,
             "y": 0,
-            "z": -0.910658
+            "z": -0.9106484
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1047,9 +1113,9 @@
             "z": -13.0569992
           },
           "Forward": {
-            "x": 0.0245294683,
+            "x": 0.02455378,
             "y": 0,
-            "z": -0.9996991
+            "z": -0.9996985
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1148,7 +1214,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "1PhaseBinahPoint"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1168,20 +1234,102 @@
       },
       "Events": [
         {
-          "EventName": "Moveto4Section",
+          "EventName": "InstantMove",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 3
+              "ConditionID": ""
             }
           ],
           "Commands": [
             {
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
+              "IsInstantMove": true,
+              "IsInterruptCurrentAction": true,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+              "IsInstantMove": true,
+              "IsInterruptCurrentAction": true,
+              "PointCommandID": "2PhaseBinahPoint",
+              "IsCommandWaitForMoveStart": false,
+              "IsCommandWaitForMoveEnd": false,
+              "CommandID": "Binah",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+              "ID": 5,
+              "MaxCameraSpeed": 3,
+              "RotationSpeed": 1,
+              "ZoomSpeed": 1,
+              "RailPoints": [
+                {
+                  "UseTableData": false,
+                  "Position": {
+                    "x": 19.75,
+                    "y": 0,
+                    "z": -91.26
+                  },
+                  "MinCameraDistance": 68.9,
+                  "MaxCameraDistance": 68.9,
+                  "CameraForward": {
+                    "x": -0.6452334,
+                    "y": -0.416742235,
+                    "z": 0.640312254
+                  }
+                }
+              ],
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "StartSection4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 22.54,
+                "y": 0,
+                "z": -100.62
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 13,
+                "Height": 5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 4,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -1202,27 +1350,7 @@
         "y": 0,
         "z": -85.7
       },
-      "Events": [
-        {
-          "EventName": "EndBattle",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 10
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
-              "BattleEndType": 4,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            }
-          ]
-        }
-      ],
+      "Events": [],
       "Obstacles": [
         {
           "UniqueName": "Desert_Truck",
@@ -1372,9 +1500,9 @@
             "z": -96.3999939
           },
           "Forward": {
-            "x": 0.121966235,
+            "x": 0.121990375,
             "y": 0,
-            "z": -0.9925342
+            "z": -0.9925313
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1392,9 +1520,9 @@
             "z": -96.95
           },
           "Forward": {
-            "x": 0.599081039,
+            "x": 0.5990994,
             "y": 0,
-            "z": -0.8006884
+            "z": -0.8006747
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1569,7 +1697,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                13
+                "2PhaseBinahPoint"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1718,5 +1846,55 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": true,
+      "CommandId": "1phaseArea",
+      "Radius": 1150,
+      "GroupTag": 1,
+      "Position": {
+        "x": -10.09,
+        "y": 0,
+        "z": -1.65
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": true,
+      "CommandId": "2phaseArea",
+      "Radius": 1150,
+      "GroupTag": 1,
+      "Position": {
+        "x": 10.58,
+        "y": 0,
+        "z": -13.6
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": true,
+      "CommandId": "2phaseArea",
+      "Radius": 900,
+      "GroupTag": 1,
+      "Position": {
+        "x": 5.61,
+        "y": 0,
+        "z": -0.26
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
 }

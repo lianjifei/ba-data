@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,12 +21,15 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 6,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [
               {
                 "UseTableData": true,
@@ -59,14 +62,14 @@
                 }
               }
             ],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -88,7 +91,7 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": null,
               "Shape": 0,
               "Target": 0,
               "Trigger": 0,
@@ -109,7 +112,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -117,7 +120,7 @@
               "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
               "propKey": 3,
               "animationName": "Chesed_Door_03_Close",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
@@ -126,14 +129,14 @@
               "ClearCondition": 0,
               "Waves": [
                 {
-                  "SpawnPointCommandId": 1,
+                  "SpawnPointCommandId": "1",
                   "EndCount": 0,
                   "WaveDelay": 3000,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
                 {
-                  "SpawnPointCommandId": 2,
+                  "SpawnPointCommandId": "2",
                   "EndCount": 0,
                   "WaveDelay": 3000,
                   "StartOperator": "",
@@ -144,7 +147,7 @@
               "ClearWaveAction": null,
               "TotalCountChangedAction": null,
               "AllClearAction": null,
-              "CommandID": 0,
+              "CommandID": "0",
               "CurWaveNum": 0,
               "CurrProcess": null,
               "IsClearLastWave": false,
@@ -154,7 +157,7 @@
             {
               "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
               "GroupId": "Chesed_Wave01_Count01",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -167,40 +170,40 @@
               "$type": "MX.Logic.Battles.GroundConditionEndWave, Assembly-CSharp",
               "UniqueName": "",
               "Step": 1,
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
               "GroupId": "Chesed_Wave01_Count02",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 8,
-              "CommandID": 0,
+              "Milliseconds": 8000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
               "propKey": 1,
               "animationName": "Chesed_Door_Open",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "StartNextSection",
+          "EventName": "StartSection2",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionEndWave, Assembly-CSharp",
               "UniqueName": "",
               "Step": 2,
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -208,21 +211,21 @@
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 2,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
               "propKey": 3,
               "animationName": "Chesed_Door_03_Open",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
               "propKey": 4,
               "animationName": "Chesed_Door_03_Open",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -263,8 +266,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -301,8 +304,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -339,8 +342,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -377,8 +380,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -415,8 +418,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -474,8 +477,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -528,8 +531,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -582,8 +585,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -636,8 +639,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -690,8 +693,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -733,7 +736,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1
+                "1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -770,7 +773,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1
+                "1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -807,7 +810,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1
+                "1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -844,7 +847,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1
+                "1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -881,7 +884,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1
+                "1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -944,7 +947,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1002,7 +1005,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1060,7 +1063,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1118,7 +1121,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1196,7 +1199,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1238,7 +1241,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1275,7 +1278,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1312,7 +1315,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1349,7 +1352,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1386,7 +1389,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1411,7 +1414,7 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": null,
               "Shape": 0,
               "Target": 0,
               "Trigger": 0,
@@ -1432,7 +1435,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -1440,7 +1443,7 @@
               "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
               "propKey": 5,
               "animationName": "Chesed_Door_03_Close",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
@@ -1449,14 +1452,14 @@
               "ClearCondition": 0,
               "Waves": [
                 {
-                  "SpawnPointCommandId": 1,
+                  "SpawnPointCommandId": "1",
                   "EndCount": 0,
                   "WaveDelay": 3000,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
                 {
-                  "SpawnPointCommandId": 2,
+                  "SpawnPointCommandId": "2",
                   "EndCount": 0,
                   "WaveDelay": 3000,
                   "StartOperator": "",
@@ -1467,7 +1470,7 @@
               "ClearWaveAction": null,
               "TotalCountChangedAction": null,
               "AllClearAction": null,
-              "CommandID": 0,
+              "CommandID": "0",
               "CurWaveNum": 0,
               "CurrProcess": null,
               "IsClearLastWave": false,
@@ -1477,7 +1480,7 @@
             {
               "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
               "GroupId": "Chesed_Wave02_Count01",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -1490,40 +1493,40 @@
               "$type": "MX.Logic.Battles.GroundConditionEndWave, Assembly-CSharp",
               "UniqueName": "",
               "Step": 1,
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
               "GroupId": "Chesed_Wave02_Count02",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 8,
-              "CommandID": 0,
+              "Milliseconds": 8000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
               "propKey": 2,
               "animationName": "Chesed_Door_Open",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "StartNextSection",
+          "EventName": "StartSection3",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionEndWave, Assembly-CSharp",
               "UniqueName": "",
               "Step": 2,
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -1531,14 +1534,14 @@
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 3,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
               "propKey": 5,
               "animationName": "Chesed_Door_03_Open",
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -1579,8 +1582,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1617,8 +1620,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1676,8 +1679,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1730,8 +1733,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1784,8 +1787,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1838,8 +1841,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1892,8 +1895,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1946,8 +1949,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2000,8 +2003,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2054,8 +2057,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2118,8 +2121,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2197,8 +2200,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2276,8 +2279,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2355,8 +2358,8 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2
+                "1",
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2398,7 +2401,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2461,7 +2464,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2519,7 +2522,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2577,7 +2580,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2635,7 +2638,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2660,7 +2663,7 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": null,
               "Shape": 0,
               "Target": 0,
               "Trigger": 0,
@@ -2681,7 +2684,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -2689,19 +2692,22 @@
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 2,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
               "IsInstantMove": true,
-              "IsInterruptCurrentAction": false,
-              "CommandID": 0,
+              "IsInterruptCurrentAction": true,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandLocateCamera, Assembly-CSharp",
               "ID": 6,
+              "MaxCameraSpeed": 3,
+              "RotationSpeed": 1,
+              "ZoomSpeed": 1,
               "RailPoints": [
                 {
                   "UseTableData": true,
@@ -2734,7 +2740,7 @@
                   }
                 }
               ],
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
@@ -2742,7 +2748,7 @@
               "TimelinePath": "Timeline/FX_Chesed_OP_Boss",
               "UseGameTime": false,
               "CanSkip": true,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -2753,7 +2759,7 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": null,
               "Shape": 0,
               "Target": 0,
               "Trigger": 0,
@@ -2774,21 +2780,21 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 1,
-              "CommandID": 0,
+              "Milliseconds": 1000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 4,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -2816,14 +2822,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 4
+              "ConditionID": ""
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": 41,
+              "CommandID": "CommandSpawnChesed",
               "WaitExecuteEnd": false
             }
           ]
@@ -2835,14 +2841,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 99
+              "ConditionID": "Chesed"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 4,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -2862,7 +2868,7 @@
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                99
+                "Chesed"
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
@@ -2879,7 +2885,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                41
+                "CommandSpawnChesed"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2983,5 +2989,6 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": []
 }

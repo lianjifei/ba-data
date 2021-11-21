@@ -1,5 +1,5 @@
 {
-  "Version": "1.2",
+  "Version": "1.35",
   "Global": {
     "Position": {
       "x": 1.74,
@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,12 +21,15 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 4,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [
               {
                 "UseTableData": true,
@@ -44,14 +47,14 @@
                 }
               }
             ],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -73,14 +76,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": 10,
+              "CommandID": "10",
               "WaitExecuteEnd": false
             }
           ]
@@ -92,7 +95,7 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
               "Phase": 2,
-              "ConditionID": 10
+              "ConditionID": "10"
             }
           ],
           "Commands": [
@@ -100,12 +103,15 @@
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 2,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandLocateCamera, Assembly-CSharp",
               "ID": 5,
+              "MaxCameraSpeed": 3,
+              "RotationSpeed": 1,
+              "ZoomSpeed": 1,
               "RailPoints": [
                 {
                   "UseTableData": true,
@@ -123,31 +129,31 @@
                   }
                 }
               ],
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
-              "PointCommandID": 13,
+              "PointCommandID": "13",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 10,
+              "CommandID": "10",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 0.01,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -159,14 +165,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 10
+              "ConditionID": "10"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 4,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -319,9 +325,9 @@
             "z": -17.5070038
           },
           "Forward": {
-            "x": 0.413166881,
+            "x": 0.413169265,
             "y": 0,
-            "z": -0.9106553
+            "z": -0.910654247
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -379,9 +385,9 @@
             "z": -13.0569992
           },
           "Forward": {
-            "x": 0.0245359037,
+            "x": 0.02453924,
             "y": 0,
-            "z": -0.999698937
+            "z": -0.9996989
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -465,10 +471,10 @@
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                10
+                "10"
               ],
               "SpawnCommandIdList": [
-                10
+                "10"
               ],
               "MovePoints": [],
               "TileX": 157,
@@ -484,7 +490,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                10
+                "10"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -509,7 +515,7 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 2
+              "ConditionID": "2"
             }
           ],
           "Commands": [
@@ -517,7 +523,7 @@
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 3,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -546,14 +552,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 10
+              "ConditionID": "10"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 4,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -708,9 +714,9 @@
             "z": -96.3999939
           },
           "Forward": {
-            "x": 0.121972628,
+            "x": 0.121975943,
             "y": 0,
-            "z": -0.992533445
+            "z": -0.992533
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -728,9 +734,9 @@
             "z": -96.95
           },
           "Forward": {
-            "x": 0.5990858,
+            "x": 0.5990883,
             "y": 0,
-            "z": -0.8006848
+            "z": -0.800682962
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -905,7 +911,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                13
+                "13"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -979,5 +985,6 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": []
 }

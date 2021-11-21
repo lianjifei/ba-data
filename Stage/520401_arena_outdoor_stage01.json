@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,28 +21,31 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": true,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -64,14 +67,15 @@
           "Conditions": [
             {
               "$type": "GroundConditionWaitForSeconds, Assembly-CSharp",
-              "Seconds": 30,
-              "ConditionID": 0
+              "Seconds": 0,
+              "Milliseconds": 30000,
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
-              "CommandID": 1000,
+              "CommandID": "1000",
               "WaitExecuteEnd": false
             }
           ]
@@ -82,8 +86,9 @@
           "Conditions": [
             {
               "$type": "GroundConditionWaitForSeconds, Assembly-CSharp",
-              "Seconds": 32,
-              "ConditionID": 0
+              "Seconds": 0,
+              "Milliseconds": 32000,
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -92,7 +97,7 @@
               "Interval": 0,
               "SkillGroupId": "ArenaObstacle01",
               "SkillLevel": 1,
-              "CommandID": 999,
+              "CommandID": "999",
               "WaitExecuteEnd": false
             }
           ]
@@ -305,9 +310,9 @@
             "z": 15.4699993
           },
           "Forward": {
-            "x": 0.437262625,
+            "x": 0.4372637,
             "y": 0,
-            "z": -0.899333835
+            "z": -0.899333358
           },
           "ActiveEnemyPointIndices": [
             0
@@ -335,7 +340,7 @@
           "ActivePlayerPointIndices": [],
           "ConditionIdList": [],
           "CommandIdList": [
-            1000
+            "1000"
           ],
           "SubObstacles": [
             {
@@ -368,7 +373,7 @@
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                999
+                "999"
               ],
               "MovePoints": [],
               "TileX": 32,
@@ -384,7 +389,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                999
+                "999"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -459,5 +464,6 @@
       "Height": 0,
       "IsEnemy": true
     }
-  ]
+  ],
+  "TemporaryCanUseSkillAreas": []
 }

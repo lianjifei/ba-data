@@ -1,65 +1,9 @@
 {
-  "LastEntityId": 10011,
+  "LastEntityId": 10020,
   "IsBig": false,
   "hexaTileList": [
     {
-      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
-      "IsHide": false,
-      "IsFog": false,
-      "CanNotMove": false,
-      "Location": {
-        "x": 1,
-        "y": -1,
-        "z": 0
-      },
-      "Strategy": null,
-      "Unit": null,
-      "PlayAnimation": false
-    },
-    {
-      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
-      "IsHide": false,
-      "IsFog": false,
-      "CanNotMove": false,
-      "Location": {
-        "x": 1,
-        "y": 0,
-        "z": -1
-      },
-      "Strategy": null,
-      "Unit": null,
-      "PlayAnimation": false
-    },
-    {
-      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
-      "IsHide": false,
-      "IsFog": false,
-      "CanNotMove": false,
-      "Location": {
-        "x": 1,
-        "y": 1,
-        "z": -2
-      },
-      "Strategy": null,
-      "Unit": null,
-      "PlayAnimation": false
-    },
-    {
-      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
-      "IsHide": false,
-      "IsFog": false,
-      "CanNotMove": false,
-      "Location": {
-        "x": 2,
-        "y": 1,
-        "z": -3
-      },
-      "Strategy": null,
-      "Unit": null,
-      "PlayAnimation": false
-    },
-    {
-      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
+      "ResourcePath": "Campaign/Tile/Desert/Movable/TileRemoveObject_TargetTile_01",
       "IsHide": false,
       "IsFog": false,
       "CanNotMove": false,
@@ -79,21 +23,21 @@
       "CanNotMove": false,
       "Location": {
         "x": 2,
-        "y": -1,
-        "z": -1
-      },
-      "Strategy": null,
-      "Unit": null,
-      "PlayAnimation": false
-    },
-    {
-      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
-      "IsHide": false,
-      "IsFog": false,
-      "CanNotMove": false,
-      "Location": {
-        "x": 3,
         "y": -3,
+        "z": 1
+      },
+      "Strategy": null,
+      "Unit": null,
+      "PlayAnimation": false
+    },
+    {
+      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
+      "IsHide": false,
+      "IsFog": false,
+      "CanNotMove": false,
+      "Location": {
+        "x": 1,
+        "y": -1,
         "z": 0
       },
       "Strategy": null,
@@ -106,9 +50,9 @@
       "IsFog": false,
       "CanNotMove": false,
       "Location": {
-        "x": 3,
+        "x": 2,
         "y": -1,
-        "z": -2
+        "z": -1
       },
       "Strategy": null,
       "Unit": null,
@@ -120,9 +64,23 @@
       "IsFog": false,
       "CanNotMove": false,
       "Location": {
-        "x": 3,
+        "x": 1,
         "y": 0,
-        "z": -3
+        "z": -1
+      },
+      "Strategy": null,
+      "Unit": null,
+      "PlayAnimation": false
+    },
+    {
+      "ResourcePath": "Campaign/Tile/Desert/Movable/TileRemoveObject_TargetTile_01",
+      "IsHide": false,
+      "IsFog": false,
+      "CanNotMove": false,
+      "Location": {
+        "x": 0,
+        "y": 0,
+        "z": 0
       },
       "Strategy": null,
       "Unit": null,
@@ -134,9 +92,37 @@
       "IsFog": false,
       "CanNotMove": false,
       "Location": {
-        "x": 4,
-        "y": -2,
-        "z": -2
+        "x": -1,
+        "y": 1,
+        "z": 0
+      },
+      "Strategy": null,
+      "Unit": null,
+      "PlayAnimation": false
+    },
+    {
+      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
+      "IsHide": false,
+      "IsFog": false,
+      "CanNotMove": false,
+      "Location": {
+        "x": -1,
+        "y": 2,
+        "z": -1
+      },
+      "Strategy": null,
+      "Unit": null,
+      "PlayAnimation": false
+    },
+    {
+      "ResourcePath": "Campaign/Tile/Desert/Movable/tile_desert_movable01",
+      "IsHide": false,
+      "IsFog": false,
+      "CanNotMove": false,
+      "Location": {
+        "x": -2,
+        "y": 2,
+        "z": 0
       },
       "Strategy": null,
       "Unit": null,
@@ -148,11 +134,11 @@
       "EntityId": 10005,
       "HpInfos": null,
       "DyingInfos": null,
+      "BuffInfos": null,
       "ActionCountMax": 0,
       "ActionCount": 0,
       "Mobility": 0,
       "StrategySightRange": 0,
-      "PortalUsed": false,
       "Id": 103210101,
       "Rotate": {
         "x": 0,
@@ -160,9 +146,9 @@
         "z": 0
       },
       "Location": {
-        "x": 3,
+        "x": 1,
         "y": 0,
-        "z": -3
+        "z": -1
       },
       "AIDestination": {
         "x": 0,
@@ -180,11 +166,11 @@
       "EntityId": 10006,
       "HpInfos": null,
       "DyingInfos": null,
+      "BuffInfos": null,
       "ActionCountMax": 0,
       "ActionCount": 0,
       "Mobility": 0,
       "StrategySightRange": 0,
-      "PortalUsed": false,
       "Id": 103210102,
       "Rotate": {
         "x": 0,
@@ -192,8 +178,8 @@
         "z": 0
       },
       "Location": {
-        "x": 1,
-        "y": 0,
+        "x": -1,
+        "y": 2,
         "z": -1
       },
       "AIDestination": {
@@ -212,11 +198,11 @@
       "EntityId": 10007,
       "HpInfos": null,
       "DyingInfos": null,
+      "BuffInfos": null,
       "ActionCountMax": 0,
       "ActionCount": 0,
       "Mobility": 0,
       "StrategySightRange": 0,
-      "PortalUsed": false,
       "Id": 103210103,
       "Rotate": {
         "x": 0,
@@ -224,9 +210,9 @@
         "z": 0
       },
       "Location": {
-        "x": 1,
-        "y": 1,
-        "z": -2
+        "x": 2,
+        "y": -3,
+        "z": 1
       },
       "AIDestination": {
         "x": 0,
@@ -243,81 +229,6 @@
   ],
   "hexaStrageyList": [
     {
-      "EntityId": 10001,
-      "Rotate": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "Id": 1,
-      "Location": {
-        "x": 4,
-        "y": -2,
-        "z": -2
-      },
-      "PlayAnimation": false
-    },
-    {
-      "EntityId": 10004,
-      "Rotate": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "Id": 1,
-      "Location": {
-        "x": 3,
-        "y": -3,
-        "z": 0
-      },
-      "PlayAnimation": false
-    },
-    {
-      "EntityId": 10008,
-      "Rotate": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "Id": 21,
-      "Location": {
-        "x": 2,
-        "y": -1,
-        "z": -1
-      },
-      "PlayAnimation": false
-    },
-    {
-      "EntityId": 10009,
-      "Rotate": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "Id": 12,
-      "Location": {
-        "x": 3,
-        "y": -1,
-        "z": -2
-      },
-      "PlayAnimation": false
-    },
-    {
-      "EntityId": 10010,
-      "Rotate": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "Id": 12,
-      "Location": {
-        "x": 1,
-        "y": -1,
-        "z": 0
-      },
-      "PlayAnimation": false
-    },
-    {
       "EntityId": 10011,
       "Rotate": {
         "x": 0,
@@ -327,10 +238,67 @@
       "Id": 1032101,
       "Location": {
         "x": 2,
-        "y": 1,
-        "z": -3
+        "y": -1,
+        "z": -1
       },
-      "PlayAnimation": false
+      "PlayAnimation": false,
+      "Activated": false,
+      "Values": null,
+      "Index": 0
+    },
+    {
+      "EntityId": 10017,
+      "Rotate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Id": 101101,
+      "Location": {
+        "x": -2,
+        "y": 2,
+        "z": 0
+      },
+      "PlayAnimation": false,
+      "Activated": false,
+      "Values": null,
+      "Index": 0
+    },
+    {
+      "EntityId": 10019,
+      "Rotate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Id": 102101,
+      "Location": {
+        "x": 1,
+        "y": -1,
+        "z": 0
+      },
+      "PlayAnimation": false,
+      "Activated": false,
+      "Values": null,
+      "Index": 0
+    },
+    {
+      "EntityId": 10020,
+      "Rotate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Id": 102101,
+      "Location": {
+        "x": -1,
+        "y": 1,
+        "z": 0
+      },
+      "PlayAnimation": false,
+      "Activated": false,
+      "Values": null,
+      "Index": 0
     }
   ],
   "Events": [
@@ -341,7 +309,9 @@
         {
           "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionStartCampaign, Assembly-CSharp",
           "Type": 1,
-          "ConditionId": 0
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
         }
       ],
       "MultipleConditionCheckType": 0,
@@ -349,11 +319,9 @@
         {
           "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandStrategySpawn, Assembly-CSharp",
           "StrategyEntityIds": [
-            10001,
-            10004,
-            10009,
-            10010,
-            10008,
+            10017,
+            10020,
+            10019,
             10011
           ],
           "Type": 3,
@@ -368,6 +336,114 @@
           ],
           "Type": 1,
           "CommandId": 1
+        },
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandTileHide, Assembly-CSharp",
+          "TileLocations": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            {
+              "x": 2,
+              "y": -2,
+              "z": 0
+            }
+          ],
+          "Type": 5,
+          "CommandId": 2
+        }
+      ]
+    },
+    {
+      "EventName": "TileSpawn (1)",
+      "EventId": 1,
+      "HexaConditions": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionArriveTile, Assembly-CSharp",
+          "TileLocation": {
+            "x": 1,
+            "y": -1,
+            "z": 0
+          },
+          "Type": 4,
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
+        }
+      ],
+      "MultipleConditionCheckType": 0,
+      "HexaCommands": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandTileSpawn, Assembly-CSharp",
+          "TileLocations": [
+            {
+              "x": 2,
+              "y": -2,
+              "z": 0
+            }
+          ],
+          "Type": 4,
+          "CommandId": 0
+        }
+      ]
+    },
+    {
+      "EventName": "TileSpawn (2)",
+      "EventId": 2,
+      "HexaConditions": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionArriveTile, Assembly-CSharp",
+          "TileLocation": {
+            "x": -1,
+            "y": 1,
+            "z": 0
+          },
+          "Type": 4,
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
+        }
+      ],
+      "MultipleConditionCheckType": 0,
+      "HexaCommands": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandTileSpawn, Assembly-CSharp",
+          "TileLocations": [
+            {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          ],
+          "Type": 4,
+          "CommandId": 0
+        }
+      ]
+    },
+    {
+      "EventName": "EndBattle_Win",
+      "EventId": 3,
+      "HexaConditions": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionUnitDead, Assembly-CSharp",
+          "UnitEntityIds": [
+            10007
+          ],
+          "Type": 3,
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
+        }
+      ],
+      "MultipleConditionCheckType": 0,
+      "HexaCommands": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandEndBattle, Assembly-CSharp",
+          "EndBattleType": 1,
+          "Type": 6,
+          "CommandId": 0
         }
       ]
     }

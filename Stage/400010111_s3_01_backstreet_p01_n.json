@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,21 +21,149 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead1-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead1-2"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0,
+              "y": 0,
+              "z": 33
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 11
+            },
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead2-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
             "WaitExecuteEnd": false
           }
         ]
@@ -57,14 +185,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 1
+              "ConditionID": "1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 21,
+              "CommandID": "21",
               "WaitExecuteEnd": false
             }
           ]
@@ -76,14 +204,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 921
+              "ConditionID": "ConditionDead1-1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 22,
+              "CommandID": "22",
               "WaitExecuteEnd": false
             }
           ]
@@ -95,7 +223,7 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 922
+              "ConditionID": "ConditionDead1-2"
             }
           ],
           "Commands": [
@@ -103,7 +231,7 @@
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 2,
               "SetConditionCommandOnly": false,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -404,7 +532,7 @@
             "z": 34.87
           },
           "Forward": {
-            "x": -0.2027873,
+            "x": -0.20278728,
             "y": 0,
             "z": 0.979222834
           },
@@ -542,10 +670,10 @@
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                921
+                "ConditionDead1-1"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
               "TileX": 40,
@@ -561,7 +689,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -571,24 +699,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                921
+                "ConditionDead1-1"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 36,
-              "TileY": 201,
+              "TileX": 32,
+              "TileY": 188,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.852448,
-                "y": 35.7149544
+                "x": -1.51,
+                "y": 33.04
               },
               "Direction": {
                 "x": -0.06975664,
@@ -596,7 +724,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -606,24 +734,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                921
+                "ConditionDead1-1"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 51,
-              "TileY": 205,
+              "TileX": 48,
+              "TileY": 188,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.14842653,
-                "y": 36.56655
+                "x": 1.61,
+                "y": 33.16
               },
               "Direction": {
                 "x": 0.03489945,
@@ -631,7 +759,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -641,32 +769,32 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                921
+                "ConditionDead1-1"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 30,
-              "TileY": 199,
+              "TileX": 34,
+              "TileY": 214,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.07,
-                "y": 35.35
+                "x": -1.13,
+                "y": 38.27
               },
               "Direction": {
-                "x": 0.0174524635,
+                "x": 0.0174524728,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -676,24 +804,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                921
+                "ConditionDead1-1"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 43,
-              "TileY": 202,
+              "TileX": 48,
+              "TileY": 215,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.64,
-                "y": 35.89
+                "x": 1.57999992,
+                "y": 38.48
               },
               "Direction": {
                 "x": 0.06975647,
@@ -701,7 +829,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -711,24 +839,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                921
+                "ConditionDead1-1"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 23,
-              "TileY": 205,
+              "TileX": 28,
+              "TileY": 219,
               "PositionHeight": 0,
               "Position": {
-                "x": -3.41140461,
-                "y": 36.5591
+                "x": -2.47140455,
+                "y": 39.34
               },
               "Direction": {
                 "x": -0.0348996259,
@@ -736,7 +864,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -757,18 +885,18 @@
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                922
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
               "TileX": 33,
-              "TileY": 221,
+              "TileY": 222,
               "PositionHeight": 0,
               "Position": {
                 "x": -1.36,
-                "y": 39.75
+                "y": 39.9899979
               },
               "Direction": {
                 "x": 0.06975647,
@@ -776,7 +904,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -792,10 +920,10 @@
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                922
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
               "TileX": 43,
@@ -806,12 +934,12 @@
                 "y": 40.09
               },
               "Direction": {
-                "x": 0.0523358,
+                "x": 0.05233578,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -821,32 +949,32 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                922
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
-              "TileX": 22,
-              "TileY": 237,
+              "TileX": 33,
+              "TileY": 250,
               "PositionHeight": 0,
               "Position": {
-                "x": -3.54713774,
-                "y": 42.8942375
+                "x": -1.5,
+                "y": 45.4
               },
               "Direction": {
-                "x": -0.0174524,
+                "x": -0.01745241,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -856,24 +984,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                922
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
               "TileX": 53,
-              "TileY": 235,
+              "TileY": 247,
               "PositionHeight": 0,
               "Position": {
                 "x": 2.53,
-                "y": 42.47
+                "y": 44.9757652
               },
               "Direction": {
                 "x": -0.0348996259,
@@ -881,7 +1009,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -891,32 +1019,32 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                922
+                "ConditionDead1-2"
               ],
               "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
               "TileX": 41,
-              "TileY": 235,
+              "TileY": 248,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.143621534,
-                "y": 42.50735
+                "x": 0.29,
+                "y": 45.0131149
               },
               "Direction": {
-                "x": 0.0523358,
+                "x": 0.05233578,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -941,14 +1069,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 1
+              "ConditionID": "1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 31,
+              "CommandID": "31",
               "WaitExecuteEnd": false
             }
           ]
@@ -960,14 +1088,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 931
+              "ConditionID": "ConditionDead2-1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 32,
+              "CommandID": "32",
               "WaitExecuteEnd": false
             }
           ]
@@ -979,14 +1107,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
-              "ConditionID": 932
+              "ConditionID": "ConditionDead2-2"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 4,
-              "CommandID": 99,
+              "CommandID": "99",
               "WaitExecuteEnd": false
             }
           ]
@@ -1357,10 +1485,10 @@
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                931
+                "ConditionDead2-1"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
               "TileX": 37,
@@ -1371,12 +1499,12 @@
                 "y": 53
               },
               "Direction": {
-                "x": -0.0174524,
+                "x": -0.01745241,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1386,32 +1514,32 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                931
+                "ConditionDead2-1"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
-              "TileX": 35,
-              "TileY": 298,
+              "TileX": 29,
+              "TileY": 289,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.9718972,
-                "y": 55.1014061
+                "x": -2.21,
+                "y": 53.38
               },
               "Direction": {
-                "x": 0.0174524635,
+                "x": 0.0174524728,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1421,32 +1549,32 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                931
+                "ConditionDead2-1"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
               "TileX": 47,
-              "TileY": 298,
+              "TileY": 287,
               "PositionHeight": 0,
               "Position": {
                 "x": 1.37,
-                "y": 55.17
+                "y": 52.93
               },
               "Direction": {
-                "x": 0.0174524635,
+                "x": 0.0174524728,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1456,24 +1584,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                931
+                "ConditionDead2-1"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
-              "TileX": 54,
-              "TileY": 303,
+              "TileX": 52,
+              "TileY": 318,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.80700016,
-                "y": 56.133
+                "x": 2.36,
+                "y": 59.19
               },
               "Direction": {
                 "x": -0.0348996259,
@@ -1481,7 +1609,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1491,24 +1619,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                931
+                "ConditionDead2-1"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
-              "TileX": 27,
-              "TileY": 292,
+              "TileX": 33,
+              "TileY": 319,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.69,
-                "y": 53.8
+                "x": -1.48,
+                "y": 59.21642
               },
               "Direction": {
                 "x": -0.06975664,
@@ -1516,7 +1644,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1526,24 +1654,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                931
+                "ConditionDead2-1"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
-              "TileX": 41,
-              "TileY": 296,
+              "TileX": 42,
+              "TileY": 315,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.27,
-                "y": 54.7
+                "x": 0.38,
+                "y": 58.5100021
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1551,7 +1679,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1572,18 +1700,18 @@
               },
               "SpawnAIGroupId": "F",
               "SpawnConditionIdList": [
-                932
+                "ConditionDead2-2"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 35,
-              "TileY": 321,
+              "TileX": 32,
+              "TileY": 322,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.08,
-                "y": 59.7
+                "x": -1.7,
+                "y": 59.89
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1591,7 +1719,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1601,24 +1729,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "F",
               "SpawnConditionIdList": [
-                932
+                "ConditionDead2-2"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 26,
-              "TileY": 330,
+              "TileX": 41,
+              "TileY": 322,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.74,
-                "y": 61.48
+                "x": 0.18,
+                "y": 59.85
               },
               "Direction": {
                 "x": 0.03489945,
@@ -1626,7 +1754,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1636,32 +1764,32 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "F",
               "SpawnConditionIdList": [
-                932
+                "ConditionDead2-2"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 44,
-              "TileY": 326,
+              "TileX": 51,
+              "TileY": 323,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.83,
-                "y": 60.79
+                "x": 2.18,
+                "y": 60.0599976
               },
               "Direction": {
-                "x": -0.0174524,
+                "x": -0.01745241,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1671,24 +1799,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "F",
               "SpawnConditionIdList": [
-                932
+                "ConditionDead2-2"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 54,
-              "TileY": 327,
+              "TileX": 23,
+              "TileY": 350,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.74,
-                "y": 60.93
+                "x": -3.41,
+                "y": 65.42107
               },
               "Direction": {
                 "x": -0.0348996259,
@@ -1696,7 +1824,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1706,24 +1834,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "F",
               "SpawnConditionIdList": [
-                932
+                "ConditionDead2-2"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 45,
-              "TileY": 335,
+              "TileX": 35,
+              "TileY": 348,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.07,
-                "y": 62.57
+                "x": -1.05,
+                "y": 65
               },
               "Direction": {
                 "x": 0.03489945,
@@ -1731,7 +1859,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1747,18 +1875,18 @@
               },
               "SpawnAIGroupId": "F",
               "SpawnConditionIdList": [
-                932
+                "ConditionDead2-2"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 38,
-              "TileY": 342,
+              "TileX": 44,
+              "TileY": 349,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.46,
-                "y": 63.8099976
+                "x": 0.76,
+                "y": 65.33
               },
               "Direction": {
                 "x": 0.03489945,
@@ -1766,7 +1894,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1825,5 +1953,71 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 33
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 40
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 53
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-2Area",
+      "Radius": 1500,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 57
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
 }

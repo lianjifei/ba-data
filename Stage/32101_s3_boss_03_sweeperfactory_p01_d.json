@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,12 +21,15 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
-            "ID": 1,
+            "ID": 9,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [
               {
                 "UseTableData": true,
@@ -59,20 +62,39 @@
                 }
               }
             ],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
             "GroupId": "WeekDungeonCombatStart_02_01",
-            "CommandID": 0,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
             "WaitExecuteEnd": false
           }
         ]
@@ -94,7 +116,7 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -104,42 +126,42 @@
               "ClearCondition": 1,
               "Waves": [
                 {
-                  "SpawnPointCommandId": 1,
+                  "SpawnPointCommandId": "1",
                   "EndCount": 4,
                   "WaveDelay": 0,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
                 {
-                  "SpawnPointCommandId": 2,
+                  "SpawnPointCommandId": "2",
                   "EndCount": 4,
-                  "WaveDelay": 0,
+                  "WaveDelay": 1000,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
                 {
-                  "SpawnPointCommandId": 3,
+                  "SpawnPointCommandId": "3",
                   "EndCount": 4,
-                  "WaveDelay": 0,
+                  "WaveDelay": 1000,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
                 {
-                  "SpawnPointCommandId": 4,
+                  "SpawnPointCommandId": "4",
                   "EndCount": 4,
-                  "WaveDelay": 0,
+                  "WaveDelay": 1000,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
                 {
-                  "SpawnPointCommandId": 5,
+                  "SpawnPointCommandId": "5",
                   "EndCount": 4,
-                  "WaveDelay": 0,
+                  "WaveDelay": 1000,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
                 {
-                  "SpawnPointCommandId": 6,
+                  "SpawnPointCommandId": "6",
                   "EndCount": 0,
                   "WaveDelay": 0,
                   "StartOperator": "",
@@ -150,7 +172,7 @@
               "ClearWaveAction": null,
               "TotalCountChangedAction": null,
               "AllClearAction": null,
-              "CommandID": 0,
+              "CommandID": "0",
               "CurWaveNum": 0,
               "CurrProcess": null,
               "IsClearLastWave": false,
@@ -167,14 +189,14 @@
               "$type": "MX.Logic.Battles.GroundConditionEndWave, Assembly-CSharp",
               "UniqueName": "",
               "Step": 6,
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 4,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -182,16 +204,16 @@
       ],
       "Obstacles": [
         {
-          "UniqueName": "Backstreet_Box02",
+          "UniqueName": "SweeperFactory_BigBox_01",
           "Position": {
-            "x": -2.7900002,
+            "x": -2.84,
             "y": 0,
-            "z": 18.803
+            "z": 18.903
           },
           "Forward": {
-            "x": -0.1602259,
+            "x": -0.9998766,
             "y": 0,
-            "z": 0.9870804
+            "z": -0.015707368
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -200,16 +222,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Box02",
+          "UniqueName": "SweeperFactory_BigBox_01",
           "Position": {
-            "x": -3.41,
+            "x": -2.84,
             "y": 0,
-            "z": 20.112999
+            "z": 17.653
           },
           "Forward": {
-            "x": 0.0219893064,
+            "x": -0.9871363,
             "y": 0,
-            "z": 0.9997582
+            "z": -0.159881085
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -218,16 +240,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Box02",
+          "UniqueName": "SweeperFactory_BigBox_01",
           "Position": {
-            "x": 2.43,
+            "x": -2.84,
             "y": 0,
-            "z": 23.1929989
+            "z": 19.873
           },
           "Forward": {
-            "x": -0.273287743,
+            "x": -0.9981348,
             "y": 0,
-            "z": 0.9619323
+            "z": -0.061048355
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -236,16 +258,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Boxcart",
+          "UniqueName": "SweeperFactory_Box_01",
           "Position": {
-            "x": -2.97999978,
+            "x": -3.37999988,
             "y": 0,
-            "z": 22.893
+            "z": 21.953
           },
           "Forward": {
-            "x": 0.258818835,
+            "x": 0.2890316,
             "y": 0,
-            "z": 0.9659259
+            "z": 0.957319558
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -254,16 +276,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Bigbox",
+          "UniqueName": "SweeperFactory_Box_01",
           "Position": {
-            "x": -2.45,
+            "x": -3.37999988,
             "y": 0,
-            "z": 14.8429995
+            "z": 22.733
           },
           "Forward": {
-            "x": -0.5778576,
+            "x": 0.529919267,
             "y": 0,
-            "z": 0.8161376
+            "z": 0.8480481
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -272,16 +294,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Box02",
+          "UniqueName": "SweeperFactory_Box_01",
           "Position": {
-            "x": -2.57,
+            "x": -2.64,
             "y": 0,
-            "z": 31.543
+            "z": 22.3429985
           },
           "Forward": {
-            "x": -0.161603823,
+            "x": -0.9437433,
             "y": 0,
-            "z": 0.986855745
+            "z": 0.330679029
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -290,16 +312,286 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Boxcart",
+          "UniqueName": "SweeperFactory_KneeBox_01",
           "Position": {
-            "x": 3.32000017,
+            "x": 3.13,
+            "y": 0,
+            "z": 20.612999
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": 3.13,
+            "y": 0,
+            "z": 20.223
+          },
+          "Forward": {
+            "x": -0.190809041,
+            "y": 0,
+            "z": 0.981627166
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.28,
+            "y": 0,
+            "z": 19.293
+          },
+          "Forward": {
+            "x": -0.9437433,
+            "y": 0,
+            "z": 0.330679029
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.35,
+            "y": 0,
+            "z": 22.053
+          },
+          "Forward": {
+            "x": -0.9437433,
+            "y": 0,
+            "z": 0.330679029
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.72,
+            "y": 0,
+            "z": 22.6829987
+          },
+          "Forward": {
+            "x": 0.5000016,
+            "y": 0,
+            "z": -0.866024435
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.68999982,
+            "y": 0,
+            "z": 15.9129992
+          },
+          "Forward": {
+            "x": -0.9909832,
+            "y": 0,
+            "z": -0.133986115
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.2,
+            "y": 0,
+            "z": 16.203
+          },
+          "Forward": {
+            "x": -0.988651752,
+            "y": 0,
+            "z": 0.150225624
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -2.84,
+            "y": 0,
+            "z": 29.493
+          },
+          "Forward": {
+            "x": -0.9998766,
+            "y": 0,
+            "z": -0.015707368
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -3.28,
+            "y": 0,
+            "z": 33.513
+          },
+          "Forward": {
+            "x": -0.9284858,
+            "y": 0,
+            "z": -0.3713678
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -3.56000018,
+            "y": 0,
+            "z": 30.483
+          },
+          "Forward": {
+            "x": 0.5000016,
+            "y": 0,
+            "z": -0.866024435
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -2.85000014,
+            "y": 0,
+            "z": 30.853
+          },
+          "Forward": {
+            "x": -0.213030457,
+            "y": 0,
+            "z": -0.977045536
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.33000016,
+            "y": 0,
+            "z": 32.123
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.33000016,
+            "y": 0,
+            "z": 31.733
+          },
+          "Forward": {
+            "x": -0.190809041,
+            "y": 0,
+            "z": 0.981627166
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.33000016,
+            "y": 0,
+            "z": 34.653
+          },
+          "Forward": {
+            "x": -0.027921645,
+            "y": 0,
+            "z": 0.9996101
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 2.9,
+            "y": 0,
+            "z": 27.943
+          },
+          "Forward": {
+            "x": 0.5000016,
+            "y": 0,
+            "z": -0.866024435
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.40999985,
             "y": 0,
             "z": 28.493
           },
           "Forward": {
-            "x": -0.026176963,
+            "x": -0.213030457,
             "y": 0,
-            "z": 0.999657333
+            "z": -0.977045536
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -308,16 +600,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Box02",
+          "UniqueName": "SweeperFactory_BigBox_01",
           "Position": {
-            "x": 3.5,
+            "x": -3.16,
             "y": 0,
-            "z": 33.413002
+            "z": 43.563
           },
           "Forward": {
-            "x": 0.2907019,
+            "x": 0.0593081228,
             "y": 0,
-            "z": 0.9568137
+            "z": -0.9982397
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -326,16 +618,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Box01",
+          "UniqueName": "SweeperFactory_KneeBox_01",
           "Position": {
-            "x": -3.58000016,
+            "x": 2.92,
             "y": 0,
-            "z": 31.413
+            "z": 29.223
           },
           "Forward": {
-            "x": -0.9845032,
+            "x": -0.270600528,
             "y": 0,
-            "z": 0.175366551
+            "z": 0.9626917
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -344,16 +636,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Bigbox",
+          "UniqueName": "SweeperFactory_KneeBox_01",
           "Position": {
-            "x": -2.7,
+            "x": 3.24,
             "y": 0,
-            "z": 29.583
+            "z": 29.963
           },
           "Forward": {
-            "x": -0.24361515,
+            "x": 0.186695442,
             "y": 0,
-            "z": 0.969872
+            "z": 0.9824178
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -362,16 +654,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Backstreet_Box02",
+          "UniqueName": "SweeperFactory_Box_01",
           "Position": {
-            "x": 2.93,
+            "x": -3.57,
             "y": 0,
-            "z": 29.983
+            "z": 42.2129974
           },
           "Forward": {
-            "x": 0.6045986,
+            "x": 0.989015937,
             "y": 0,
-            "z": 0.796530366
+            "z": -0.147809044
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -380,16 +672,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Park_BoxWood3",
+          "UniqueName": "SweeperFactory_KneeBox_01",
           "Position": {
-            "x": 3.63,
+            "x": 3.48,
             "y": 0,
-            "z": 30.862999
+            "z": 43.663002
           },
           "Forward": {
-            "x": -0.224951088,
+            "x": 0.992861748,
             "y": 0,
-            "z": 0.974370062
+            "z": 0.119270876
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -398,178 +690,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Park_BoxWood2",
+          "UniqueName": "SweeperFactory_KneeBox_01",
           "Position": {
-            "x": 3.55,
+            "x": 3.24,
             "y": 0,
-            "z": 16.313
+            "z": 44.403
           },
           "Forward": {
-            "x": -0.9338304,
+            "x": -0.312334925,
             "y": 0,
-            "z": 0.357716054
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Park_BoxWood3",
-          "Position": {
-            "x": 2.76,
-            "y": 0,
-            "z": 15.733
-          },
-          "Forward": {
-            "x": -0.452434719,
-            "y": 0,
-            "z": 0.891797543
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Backstreet_Boxcart",
-          "Position": {
-            "x": 3.35,
-            "y": 0,
-            "z": 14.573
-          },
-          "Forward": {
-            "x": -0.1490176,
-            "y": 0,
-            "z": 0.98883456
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Backstreet_Bigbox",
-          "Position": {
-            "x": -0.9000001,
-            "y": 0,
-            "z": 12.1329994
-          },
-          "Forward": {
-            "x": 0.1976571,
-            "y": 0,
-            "z": 0.9802712
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Backstreet_Box01",
-          "Position": {
-            "x": -3.33000016,
-            "y": 0,
-            "z": 16.513
-          },
-          "Forward": {
-            "x": 0.9822872,
-            "y": 0,
-            "z": -0.187381372
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Park_BoxWood3",
-          "Position": {
-            "x": -3.58000016,
-            "y": 0,
-            "z": 40.8529968
-          },
-          "Forward": {
-            "x": -0.22818093,
-            "y": 0,
-            "z": 0.973618746
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Backstreet_Boxcart",
-          "Position": {
-            "x": -3.43999982,
-            "y": 0,
-            "z": 43.933
-          },
-          "Forward": {
-            "x": 0.231747925,
-            "y": 0,
-            "z": 0.9727759
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Backstreet_Box01",
-          "Position": {
-            "x": -3.18999982,
-            "y": 0,
-            "z": 45.023
-          },
-          "Forward": {
-            "x": -0.6059884,
-            "y": 0,
-            "z": 0.7954735
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Backstreet_Box02",
-          "Position": {
-            "x": -3.35000014,
-            "y": 0,
-            "z": 34.072998
-          },
-          "Forward": {
-            "x": -0.368124545,
-            "y": 0,
-            "z": 0.9297765
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Backstreet_Boxcart",
-          "Position": {
-            "x": -3.53,
-            "y": 0,
-            "z": 32.572998
-          },
-          "Forward": {
-            "x": 0.6511717,
-            "y": 0,
-            "z": 0.758930445
+            "z": 0.949972034
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -598,28 +728,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
-              "MovePoints": [
-                {
-                  "NeedFindPath": false,
-                  "TileX": 30,
-                  "TileY": 220,
-                  "PositionHeight": 0,
-                  "Position": {
-                    "x": -2.05000043,
-                    "y": 39.433
-                  },
-                  "Direction": {
-                    "x": -8.742278e-08,
-                    "y": -1
-                  },
-                  "ConditionIdList": [],
-                  "CommandIdList": [],
-                  "EntityId": {
-                    "uniqueId": 0
-                  },
-                  "Active": false
-                }
-              ],
+              "MovePoints": [],
               "TileX": 40,
               "TileY": 251,
               "PositionHeight": 0,
@@ -633,12 +742,12 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -661,28 +770,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
-              "MovePoints": [
-                {
-                  "NeedFindPath": false,
-                  "TileX": 38,
-                  "TileY": 219,
-                  "PositionHeight": 0,
-                  "Position": {
-                    "x": -0.35000062,
-                    "y": 39.3929825
-                  },
-                  "Direction": {
-                    "x": -8.742278e-08,
-                    "y": -1
-                  },
-                  "ConditionIdList": [],
-                  "CommandIdList": [],
-                  "EntityId": {
-                    "uniqueId": 0
-                  },
-                  "Active": false
-                }
-              ],
+              "MovePoints": [],
               "TileX": 43,
               "TileY": 255,
               "PositionHeight": 0,
@@ -696,12 +784,12 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -724,28 +812,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
-              "MovePoints": [
-                {
-                  "NeedFindPath": false,
-                  "TileX": 47,
-                  "TileY": 220,
-                  "PositionHeight": 0,
-                  "Position": {
-                    "x": 1.38999915,
-                    "y": 39.49299
-                  },
-                  "Direction": {
-                    "x": -8.742278e-08,
-                    "y": -1
-                  },
-                  "ConditionIdList": [],
-                  "CommandIdList": [],
-                  "EntityId": {
-                    "uniqueId": 0
-                  },
-                  "Active": false
-                }
-              ],
+              "MovePoints": [],
               "TileX": 36,
               "TileY": 258,
               "PositionHeight": 0,
@@ -759,12 +826,12 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -787,28 +854,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
-              "MovePoints": [
-                {
-                  "NeedFindPath": false,
-                  "TileX": 41,
-                  "TileY": 220,
-                  "PositionHeight": 0,
-                  "Position": {
-                    "x": 0.279999256,
-                    "y": 39.4029922
-                  },
-                  "Direction": {
-                    "x": -8.742278e-08,
-                    "y": -1
-                  },
-                  "ConditionIdList": [],
-                  "CommandIdList": [],
-                  "EntityId": {
-                    "uniqueId": 0
-                  },
-                  "Active": false
-                }
-              ],
+              "MovePoints": [],
               "TileX": 44,
               "TileY": 263,
               "PositionHeight": 0,
@@ -822,12 +868,12 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -850,28 +896,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
-              "MovePoints": [
-                {
-                  "NeedFindPath": false,
-                  "TileX": 38,
-                  "TileY": 220,
-                  "PositionHeight": 0,
-                  "Position": {
-                    "x": -0.470000744,
-                    "y": 39.4429855
-                  },
-                  "Direction": {
-                    "x": -8.742278e-08,
-                    "y": -1
-                  },
-                  "ConditionIdList": [],
-                  "CommandIdList": [],
-                  "EntityId": {
-                    "uniqueId": 0
-                  },
-                  "Active": false
-                }
-              ],
+              "MovePoints": [],
               "TileX": 36,
               "TileY": 265,
               "PositionHeight": 0,
@@ -885,12 +910,12 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -913,28 +938,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
-              "MovePoints": [
-                {
-                  "NeedFindPath": false,
-                  "TileX": 38,
-                  "TileY": 223,
-                  "PositionHeight": 0,
-                  "Position": {
-                    "x": -0.470000982,
-                    "y": 40.1029968
-                  },
-                  "Direction": {
-                    "x": -8.742278e-08,
-                    "y": -1
-                  },
-                  "ConditionIdList": [],
-                  "CommandIdList": [],
-                  "EntityId": {
-                    "uniqueId": 0
-                  },
-                  "Active": false
-                }
-              ],
+              "MovePoints": [],
               "TileX": 36,
               "TileY": 274,
               "PositionHeight": 0,
@@ -948,12 +952,12 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -997,5 +1001,23 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 900,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 37.1
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
 }

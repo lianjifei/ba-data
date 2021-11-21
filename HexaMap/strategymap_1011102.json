@@ -1,5 +1,5 @@
 {
-  "LastEntityId": 10015,
+  "LastEntityId": 10016,
   "IsBig": false,
   "hexaTileList": [
     {
@@ -8,9 +8,9 @@
       "IsFog": false,
       "CanNotMove": false,
       "Location": {
-        "x": -4,
-        "y": 5,
-        "z": -1
+        "x": 1,
+        "y": -1,
+        "z": 0
       },
       "Strategy": null,
       "Unit": null,
@@ -22,9 +22,9 @@
       "IsFog": false,
       "CanNotMove": false,
       "Location": {
-        "x": -3,
-        "y": 5,
-        "z": -2
+        "x": -1,
+        "y": 0,
+        "z": 1
       },
       "Strategy": null,
       "Unit": null,
@@ -36,9 +36,9 @@
       "IsFog": false,
       "CanNotMove": false,
       "Location": {
-        "x": -3,
-        "y": 4,
-        "z": -1
+        "x": 0,
+        "y": 0,
+        "z": 0
       },
       "Strategy": null,
       "Unit": null,
@@ -50,9 +50,9 @@
       "IsFog": false,
       "CanNotMove": false,
       "Location": {
-        "x": -2,
-        "y": 4,
-        "z": -2
+        "x": 0,
+        "y": -1,
+        "z": 1
       },
       "Strategy": null,
       "Unit": null,
@@ -64,11 +64,11 @@
       "EntityId": 10014,
       "HpInfos": null,
       "DyingInfos": null,
+      "BuffInfos": null,
       "ActionCountMax": 0,
       "ActionCount": 0,
       "Mobility": 0,
       "StrategySightRange": 0,
-      "PortalUsed": false,
       "Id": 101110201,
       "Rotate": {
         "x": 0,
@@ -76,9 +76,9 @@
         "z": 0
       },
       "Location": {
-        "x": -3,
-        "y": 5,
-        "z": -2
+        "x": 0,
+        "y": 0,
+        "z": 0
       },
       "AIDestination": {
         "x": 0,
@@ -96,11 +96,11 @@
       "EntityId": 10015,
       "HpInfos": null,
       "DyingInfos": null,
+      "BuffInfos": null,
       "ActionCountMax": 0,
       "ActionCount": 0,
       "Mobility": 0,
       "StrategySightRange": 0,
-      "PortalUsed": false,
       "Id": 101110202,
       "Rotate": {
         "x": 0,
@@ -108,9 +108,9 @@
         "z": 0
       },
       "Location": {
-        "x": -2,
-        "y": 4,
-        "z": -2
+        "x": 1,
+        "y": -1,
+        "z": 0
       },
       "AIDestination": {
         "x": 0,
@@ -127,19 +127,22 @@
   ],
   "hexaStrageyList": [
     {
-      "EntityId": 10003,
+      "EntityId": 10016,
       "Rotate": {
         "x": 0,
         "y": 0,
         "z": 0
       },
-      "Id": 1,
+      "Id": 101101,
       "Location": {
-        "x": -4,
-        "y": 5,
-        "z": -1
+        "x": -1,
+        "y": 0,
+        "z": 1
       },
-      "PlayAnimation": false
+      "PlayAnimation": false,
+      "Activated": false,
+      "Values": null,
+      "Index": 0
     }
   ],
   "Events": [
@@ -150,7 +153,9 @@
         {
           "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionStartCampaign, Assembly-CSharp",
           "Type": 1,
-          "ConditionId": 0
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
         }
       ],
       "MultipleConditionCheckType": 0,
@@ -158,7 +163,7 @@
         {
           "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandStrategySpawn, Assembly-CSharp",
           "StrategyEntityIds": [
-            10003
+            10016
           ],
           "Type": 3,
           "CommandId": 0
@@ -171,6 +176,31 @@
           ],
           "Type": 1,
           "CommandId": 1
+        }
+      ]
+    },
+    {
+      "EventName": "EndBattle_Win",
+      "EventId": 1,
+      "HexaConditions": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionUnitDead, Assembly-CSharp",
+          "UnitEntityIds": [
+            10015
+          ],
+          "Type": 3,
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
+        }
+      ],
+      "MultipleConditionCheckType": 0,
+      "HexaCommands": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandEndBattle, Assembly-CSharp",
+          "EndBattleType": 1,
+          "Type": 6,
+          "CommandId": 0
         }
       ]
     }

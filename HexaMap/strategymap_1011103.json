@@ -1,5 +1,5 @@
 {
-  "LastEntityId": 10003,
+  "LastEntityId": 10004,
   "IsBig": false,
   "hexaTileList": [
     {
@@ -64,11 +64,11 @@
       "EntityId": 10001,
       "HpInfos": null,
       "DyingInfos": null,
+      "BuffInfos": null,
       "ActionCountMax": 0,
       "ActionCount": 0,
       "Mobility": 0,
       "StrategySightRange": 0,
-      "PortalUsed": false,
       "Id": 101110301,
       "Rotate": {
         "x": 0,
@@ -96,11 +96,11 @@
       "EntityId": 10002,
       "HpInfos": null,
       "DyingInfos": null,
+      "BuffInfos": null,
       "ActionCountMax": 0,
       "ActionCount": 0,
       "Mobility": 0,
       "StrategySightRange": 0,
-      "PortalUsed": false,
       "Id": 101110302,
       "Rotate": {
         "x": 0,
@@ -127,19 +127,22 @@
   ],
   "hexaStrageyList": [
     {
-      "EntityId": 10003,
+      "EntityId": 10004,
       "Rotate": {
         "x": 0,
         "y": 0,
         "z": 0
       },
-      "Id": 1,
+      "Id": 101101,
       "Location": {
         "x": -2,
         "y": 2,
         "z": 0
       },
-      "PlayAnimation": false
+      "PlayAnimation": false,
+      "Activated": false,
+      "Values": null,
+      "Index": 0
     }
   ],
   "Events": [
@@ -150,7 +153,9 @@
         {
           "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionStartCampaign, Assembly-CSharp",
           "Type": 1,
-          "ConditionId": 0
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
         }
       ],
       "MultipleConditionCheckType": 0,
@@ -158,7 +163,7 @@
         {
           "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandStrategySpawn, Assembly-CSharp",
           "StrategyEntityIds": [
-            10003
+            10004
           ],
           "Type": 3,
           "CommandId": 0
@@ -171,6 +176,31 @@
           ],
           "Type": 1,
           "CommandId": 1
+        }
+      ]
+    },
+    {
+      "EventName": "EndBattle_Win",
+      "EventId": 1,
+      "HexaConditions": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCondition.HexaConditionUnitDead, Assembly-CSharp",
+          "UnitEntityIds": [
+            10002
+          ],
+          "Type": 3,
+          "Resuable": false,
+          "ConditionId": 0,
+          "AlreadyTriggered": false
+        }
+      ],
+      "MultipleConditionCheckType": 0,
+      "HexaCommands": [
+        {
+          "$type": "MX.Campaign.HexaTileMapEvent.HexaTileMapCommand.HexaCommandEndBattle, Assembly-CSharp",
+          "EndBattleType": 1,
+          "Type": 6,
+          "CommandId": 0
         }
       ]
     }

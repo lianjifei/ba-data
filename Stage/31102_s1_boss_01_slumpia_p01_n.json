@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,12 +21,15 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 8,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [
               {
                 "UseTableData": true,
@@ -59,20 +62,20 @@
                 }
               }
             ],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
-            "GroupId": "WeekDungeonCombatStart_03_02",
-            "CommandID": 0,
+            "GroupId": "WeekDungeonCombatStart_03_01",
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -89,12 +92,30 @@
       },
       "Events": [
         {
-          "EventName": "SpawnUnit",
+          "EventName": "DummySpawn",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "50",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "DummyDie",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": null,
               "Shape": 0,
               "Target": 0,
               "Trigger": 0,
@@ -115,7 +136,55 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 2000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "CharacterCommandIdList": [
+                "50"
+              ],
+              "CharacterSpawnTemplateIdList": [],
+              "CommandID": "50",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawnUnit",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": null,
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": -0.6600001,
+                "y": 0,
+                "z": 26.303
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 20,
+                "Height": 7
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -123,14 +192,14 @@
               "$type": "MX.Logic.Battles.GroundCommandFindGift, Assembly-CSharp",
               "UniqueName": "WeekDungeon_FindGift_Stage02",
               "SpawnPointCommandIdList": [
-                1,
-                2,
-                3,
-                4,
-                5
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
               ],
               "SpawnDelay": 2000,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -143,15 +212,15 @@
               "$type": "MX.Logic.Battles.GroundConditionEndFindGift, Assembly-CSharp",
               "UniqueName": "WeekDungeon_FindGift_Stage02",
               "Compare": 0,
-              "ClearCount": 0,
-              "ConditionID": 0
+              "ClearCount": 4,
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 2,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -165,77 +234,14 @@
               "UniqueName": "WeekDungeon_FindGift_Stage02",
               "Compare": 1,
               "ClearCount": 1,
-              "ConditionID": 0
+              "ConditionID": ""
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
               "BattleEndType": 4,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "DummySpawn",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-              "ConditionID": 0
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 100,
-              "CommandID": 50,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "DummyDie",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": -0.6600001,
-                "y": 0,
-                "z": 26.303
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 20,
-                "Height": 7
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "ConditionID": 0
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 2,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
-              "CharacterId": 7199998,
-              "CommandID": 50,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             }
           ]
@@ -249,16 +255,16 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Boxcat_01_Machine_C_WEEK_StartDummy",
+                "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_StartDummy",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                0
+                "10"
               ],
               "SpawnCommandIdList": [
-                50
+                "50"
               ],
               "MovePoints": [],
               "TileX": 51,
@@ -273,10 +279,10 @@
                 "y": -1
               },
               "ConditionIdList": [
-                1
+                "1"
               ],
               "CommandIdList": [
-                50
+                "50"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -286,16 +292,16 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Boxcat_01_Machine_C_WEEK_01",
+                "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_01",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                10
+                "10"
               ],
               "SpawnCommandIdList": [
-                1
+                "1"
               ],
               "MovePoints": [],
               "TileX": 51,
@@ -310,10 +316,10 @@
                 "y": -1
               },
               "ConditionIdList": [
-                1
+                "1"
               ],
               "CommandIdList": [
-                1
+                "1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -323,16 +329,16 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Boxcat_01_Machine_C_WEEK_02",
+                "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_02",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                10
+                "10"
               ],
               "SpawnCommandIdList": [
-                2
+                "2"
               ],
               "MovePoints": [],
               "TileX": 51,
@@ -347,10 +353,10 @@
                 "y": -1
               },
               "ConditionIdList": [
-                1
+                "1"
               ],
               "CommandIdList": [
-                2
+                "2"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -360,16 +366,16 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Boxcat_01_Machine_C_WEEK_03",
+                "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_03",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                10
+                "10"
               ],
               "SpawnCommandIdList": [
-                3
+                "3"
               ],
               "MovePoints": [],
               "TileX": 51,
@@ -384,10 +390,10 @@
                 "y": -1
               },
               "ConditionIdList": [
-                1
+                "1"
               ],
               "CommandIdList": [
-                3
+                "3"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -397,16 +403,16 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Boxcat_01_Machine_C_WEEK_04",
+                "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_04",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                10
+                "10"
               ],
               "SpawnCommandIdList": [
-                4
+                "4"
               ],
               "MovePoints": [],
               "TileX": 51,
@@ -421,10 +427,10 @@
                 "y": -1
               },
               "ConditionIdList": [
-                1
+                "1"
               ],
               "CommandIdList": [
-                4
+                "4"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -434,16 +440,16 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Boxcat_01_Machine_C_WEEK_05",
+                "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_05",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
-                99
+                "99"
               ],
               "SpawnCommandIdList": [
-                5
+                "5"
               ],
               "MovePoints": [],
               "TileX": 51,
@@ -458,10 +464,10 @@
                 "y": -1
               },
               "ConditionIdList": [
-                1
+                "1"
               ],
               "CommandIdList": [
-                5
+                "5"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -505,5 +511,6 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": []
 }

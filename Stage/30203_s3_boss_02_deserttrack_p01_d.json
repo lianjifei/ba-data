@@ -13,7 +13,7 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
-            "ConditionID": 0
+            "ConditionID": "0"
           }
         ],
         "Commands": [
@@ -21,27 +21,30 @@
             "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
             "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
             "RailPoints": [],
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
-            "GroupId": "WeekDungeonCombatStart_01_03",
-            "CommandID": 0,
+            "GroupId": "WeekDungeonCombatStart_01_02",
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -52,26 +55,26 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-            "ConditionID": 1
+            "ConditionID": "1"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
-            "ConditionID": 911
+            "ConditionID": "911"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-            "TriggerRateUnder": 7500,
+            "TriggerRateUnder": 8000,
             "TriggerRateOver": -9999999,
             "TriggerMaxCount": 1,
-            "ConditionID": 991
+            "ConditionID": "991"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-            "TriggerRateUnder": 7500,
+            "TriggerRateUnder": 8000,
             "TriggerRateOver": -9999999,
             "TriggerMaxCount": 1,
-            "ConditionID": 992
+            "ConditionID": "992"
           }
         ],
         "Commands": [
@@ -79,7 +82,7 @@
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 2,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -90,12 +93,26 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-            "ConditionID": 2
+            "ConditionID": "2"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
-            "ConditionID": 912
+            "ConditionID": "912"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 6000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "991"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 6000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "992"
           }
         ],
         "Commands": [
@@ -103,7 +120,7 @@
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 3,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -114,40 +131,40 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-            "ConditionID": 3
+            "ConditionID": "3"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
-            "ConditionID": 921
+            "ConditionID": "921"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-            "TriggerRateUnder": 4500,
+            "TriggerRateUnder": 3000,
             "TriggerRateOver": -9999999,
             "TriggerMaxCount": 1,
-            "ConditionID": 991
+            "ConditionID": "991"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-            "TriggerRateUnder": 4500,
+            "TriggerRateUnder": 3000,
             "TriggerRateOver": -9999999,
             "TriggerMaxCount": 1,
-            "ConditionID": 992
+            "ConditionID": "992"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-            "TriggerRateUnder": 6000,
+            "TriggerRateUnder": 5000,
             "TriggerRateOver": -9999999,
             "TriggerMaxCount": 1,
-            "ConditionID": 993
+            "ConditionID": "993"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-            "TriggerRateUnder": 6000,
+            "TriggerRateUnder": 5000,
             "TriggerRateOver": -9999999,
             "TriggerMaxCount": 1,
-            "ConditionID": 994
+            "ConditionID": "994"
           }
         ],
         "Commands": [
@@ -155,7 +172,7 @@
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 4,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -166,12 +183,12 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-            "ConditionID": 4
+            "ConditionID": "4"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
-            "ConditionID": 922
+            "ConditionID": "922"
           }
         ],
         "Commands": [
@@ -179,7 +196,7 @@
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 5,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -190,12 +207,12 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-            "ConditionID": 5
+            "ConditionID": "5"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
-            "ConditionID": 931
+            "ConditionID": "931"
           }
         ],
         "Commands": [
@@ -203,7 +220,311 @@
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 6,
             "SetConditionCommandOnly": false,
-            "CommandID": 0,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "32"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "991"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "992"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "993"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "994"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "995"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "99",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "911"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 8000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "991"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 8000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "992"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "912"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0,
+              "y": 0,
+              "z": 31.01
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 9
+            },
+            "ConditionID": ""
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 6000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "991"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 6000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "992"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "921"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 3000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "991"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 3000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "992"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 5000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "993"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 5000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "994"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "922"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0,
+              "y": 0,
+              "z": 51
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 9
+            },
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "931"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-2Area",
+            "CommandID": "",
             "WaitExecuteEnd": false
           }
         ]
@@ -225,14 +546,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 1
+              "ConditionID": "1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 11,
+              "CommandID": "11",
               "WaitExecuteEnd": false
             }
           ]
@@ -243,34 +564,34 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 1
+              "ConditionID": "1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_Run_B_1",
+          "EventName": "Boss_Run_A_1",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 7500,
+              "TriggerRateUnder": 8000,
               "TriggerRateOver": -9999999,
               "TriggerMaxCount": 1,
-              "ConditionID": 991
+              "ConditionID": "991"
             }
           ],
           "Commands": [
@@ -279,23 +600,23 @@
               "EmojiEvent": 9,
               "LoopCount": 50,
               "IsPlay": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 2,
-              "CommandID": 0,
+              "Milliseconds": 4000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "PointCommandID": 8511,
+              "PointCommandID": "851",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
@@ -303,28 +624,28 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_Run_B_2",
+          "EventName": "Boss_Run_A_2",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 7500,
+              "TriggerRateUnder": 8000,
               "TriggerRateOver": -9999999,
               "TriggerMaxCount": 1,
-              "ConditionID": 992
+              "ConditionID": "992"
             }
           ],
           "Commands": [
@@ -333,23 +654,23 @@
               "EmojiEvent": 9,
               "LoopCount": 50,
               "IsPlay": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 2,
-              "CommandID": 0,
+              "Milliseconds": 4000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "PointCommandID": 8521,
+              "PointCommandID": "852",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
@@ -357,33 +678,33 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_ForceIdle_B_1",
+          "EventName": "Boss_ForceIdle_A_1",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
-              "Trigger": 0,
+              "Target": 3,
+              "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -1.247,
+                "x": 0.261,
                 "y": 0,
-                "z": 39.781002
+                "z": 29.3100014
               },
               "Rect": {
                 "Direction": {
@@ -396,33 +717,33 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_ForceIdle_B_2",
+          "EventName": "Boss_ForceIdle_A_2",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
-              "Trigger": 0,
+              "Target": 3,
+              "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": 1.95,
+                "x": 1.947,
                 "y": 0,
-                "z": 39.82
+                "z": 29.348999
               },
               "Rect": {
                 "Direction": {
@@ -435,14 +756,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -453,15 +774,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 1
+              "ConditionID": "1"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 20000,
+              "CoolDownInMilliSeconds": 30000,
               "SyncUseSkillGroupId": 9999,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
@@ -469,7 +790,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5551,
+              "CommandID": "5551",
               "WaitExecuteEnd": false
             },
             {
@@ -477,7 +798,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5552,
+              "CommandID": "5552",
               "WaitExecuteEnd": false
             },
             {
@@ -485,7 +806,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5553,
+              "CommandID": "5553",
               "WaitExecuteEnd": false
             },
             {
@@ -493,7 +814,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5554,
+              "CommandID": "5554",
               "WaitExecuteEnd": false
             },
             {
@@ -501,7 +822,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5555,
+              "CommandID": "5555",
               "WaitExecuteEnd": false
             }
           ]
@@ -582,9 +903,9 @@
             "z": 22.93
           },
           "Forward": {
-            "x": 0.2188067,
+            "x": 0.2188095,
             "y": 0,
-            "z": 0.9757682
+            "z": 0.9757676
           },
           "ActiveEnemyPointIndices": [
             1
@@ -621,14 +942,14 @@
         {
           "UniqueName": "Common_BaricadeMetal",
           "Position": {
-            "x": -3.57,
+            "x": -1.368,
             "y": 0,
             "z": 17.98
           },
           "Forward": {
-            "x": 0.987666,
+            "x": 0.9876665,
             "y": 0,
-            "z": 0.156575352
+            "z": 0.156572536
           },
           "ActiveEnemyPointIndices": [
             2
@@ -731,7 +1052,7 @@
         {
           "UniqueName": "Common_Baricade",
           "Position": {
-            "x": 0.58,
+            "x": -1.016,
             "y": 0,
             "z": 14.297
           },
@@ -758,24 +1079,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
+                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                1
+                "1"
               ],
               "MovePoints": [],
-              "TileX": 35,
-              "TileY": 88,
+              "TileX": 24,
+              "TileY": 106,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.06,
-                "y": 13.12
+                "x": -3.26,
+                "y": 16.6500015
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -783,42 +1104,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
-                "AIId": 0,
-                "AppearAction": true
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                911
-              ],
-              "SpawnCommandIdList": [
-                1
-              ],
-              "MovePoints": [],
-              "TileX": 48,
-              "TileY": 87,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.55,
-                "y": 12.92
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -834,10 +1120,45 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                1
+                "1"
+              ],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 106,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.55,
+                "y": 16.67
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "11"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "911"
+              ],
+              "SpawnCommandIdList": [
+                "1"
               ],
               "MovePoints": [],
               "TileX": 33,
@@ -853,7 +1174,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -869,18 +1190,18 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                911
+                "911"
               ],
               "SpawnCommandIdList": [
-                1
+                "1"
               ],
               "MovePoints": [],
-              "TileX": 24,
-              "TileY": 93,
+              "TileX": 22,
+              "TileY": 88,
               "PositionHeight": 0,
               "Position": {
-                "x": -3.22,
-                "y": 14.17
+                "x": -3.64,
+                "y": 13.13
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -888,42 +1209,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                11
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": true
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                911
-              ],
-              "SpawnCommandIdList": [
-                1
-              ],
-              "MovePoints": [],
-              "TileX": 47,
-              "TileY": 104,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.43,
-                "y": 16.24
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                11
+                "11"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -944,19 +1230,19 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                991,
-                932
+                "991",
+                "932"
               ],
               "SpawnCommandIdList": [
-                51,
-                5551
+                "51",
+                "5551"
               ],
               "MovePoints": [],
-              "TileX": 36,
+              "TileX": 22,
               "TileY": 96,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.74,
+                "x": -3.586,
                 "y": 14.7316914
               },
               "Direction": {
@@ -965,7 +1251,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                51
+                "51"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -975,25 +1261,25 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Kaitenranger_Green_HMG_C_WEEK",
+                "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                992,
-                932
+                "992",
+                "932"
               ],
               "SpawnCommandIdList": [
-                52,
-                5552
+                "52",
+                "5552"
               ],
               "MovePoints": [],
-              "TileX": 27,
+              "TileX": 48,
               "TileY": 96,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.68,
+                "x": 1.575,
                 "y": 14.756
               },
               "Direction": {
@@ -1002,7 +1288,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                52
+                "52"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1022,19 +1308,151 @@
       },
       "Events": [
         {
+          "EventName": "Boss_ForceIdle_A_all_End",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": "2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "IsForceIdleOn": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "IsForceIdleOn": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
           "EventName": "Spawn1-2",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 2
+              "ConditionID": "2"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 12,
+              "CommandID": "12",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_Run_B_1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 6000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "991"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 50,
+              "IsPlay": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 4000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+              "IsInstantMove": false,
+              "IsInterruptCurrentAction": false,
+              "PointCommandID": "8511",
+              "IsCommandWaitForMoveStart": false,
+              "IsCommandWaitForMoveEnd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_Run_B_2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 6000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "992"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 50,
+              "IsPlay": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 4000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+              "IsInstantMove": false,
+              "IsInterruptCurrentAction": false,
+              "PointCommandID": "8521",
+              "IsCommandWaitForMoveStart": false,
+              "IsCommandWaitForMoveEnd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": true,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -1045,15 +1463,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 0,
               "StayTime": 0,
               "Position": {
-                "x": -1.247,
+                "x": -2.364,
                 "y": 0,
-                "z": 39.781002
+                "z": 35.339
               },
               "Rect": {
                 "Direction": {
@@ -1066,14 +1484,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
@@ -1084,15 +1502,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 0,
               "StayTime": 0,
               "Position": {
                 "x": 1.95,
                 "y": 0,
-                "z": 39.82
+                "z": 35.1149979
               },
               "Rect": {
                 "Direction": {
@@ -1105,33 +1523,92 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_EmojiEnd_B_1",
+          "EventName": "SyncUseSkill",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": "2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 30000,
+              "SyncUseSkillGroupId": 9999,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": true,
+              "CommandID": "5551",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": true,
+              "CommandID": "5552",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": true,
+              "CommandID": "5553",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": true,
+              "CommandID": "5554",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": true,
+              "CommandID": "5555",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_EmojiEnd_A_1",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
-              "Trigger": 0,
+              "Target": 3,
+              "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -1.247,
+                "x": 0.261,
                 "y": 0,
-                "z": 39.781002
+                "z": 29.3100014
               },
               "Rect": {
                 "Direction": {
@@ -1144,7 +1621,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -1153,33 +1630,33 @@
               "EmojiEvent": 9,
               "LoopCount": 0,
               "IsPlay": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_EmojiEnd_B_2",
+          "EventName": "Boss_EmojiEnd_A_2",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
-              "Trigger": 0,
+              "Target": 3,
+              "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": 1.95,
+                "x": 1.947,
                 "y": 0,
-                "z": 39.82
+                "z": 29.348999
               },
               "Rect": {
                 "Direction": {
@@ -1192,7 +1669,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -1201,14 +1678,14 @@
               "EmojiEvent": 9,
               "LoopCount": 0,
               "IsPlay": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -1243,7 +1720,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                852
+                "852"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1261,11 +1738,11 @@
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 39,
+              "TileX": 41,
               "TileY": 169,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.109,
+                "x": 0.264000058,
                 "y": 29.3310032
               },
               "Direction": {
@@ -1274,7 +1751,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                851
+                "851"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1295,18 +1772,18 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                912
+                "912"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
-              "TileX": 49,
-              "TileY": 127,
+              "TileX": 43,
+              "TileY": 129,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.7,
-                "y": 20.84
+                "x": 0.63,
+                "y": 21.35
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1314,7 +1791,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "12"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1330,10 +1807,10 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                912
+                "912"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
               "TileX": 50,
@@ -1341,7 +1818,7 @@
               "PositionHeight": 0,
               "Position": {
                 "x": 1.93,
-                "y": 24.02
+                "y": 24.06
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1349,7 +1826,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "12"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1365,10 +1842,10 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                912
+                "912"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
               "TileX": 35,
@@ -1384,7 +1861,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
+                "12"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1400,10 +1877,10 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                912
+                "912"
               ],
               "SpawnCommandIdList": [
-                12
+                "12"
               ],
               "MovePoints": [],
               "TileX": 24,
@@ -1419,42 +1896,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                12
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": true
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                912
-              ],
-              "SpawnCommandIdList": [
-                12
-              ],
-              "MovePoints": [],
-              "TileX": 42,
-              "TileY": 130,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0.3,
-                "y": 21.4
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                12
+                "12"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1478,27 +1920,40 @@
           "Operator": 0,
           "Conditions": [
             {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 31.01
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            },
+            {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 2
+              "ConditionID": "2"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": 21,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 1,
-              "CommandID": 0,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
-              "IsForceIdleOn": true,
-              "CommandID": 21,
+              "CommandID": "21",
               "WaitExecuteEnd": false
             }
           ]
@@ -1509,20 +1964,20 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 2
+              "ConditionID": "2"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
@@ -1533,7 +1988,7 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
               "Trigger": 1,
@@ -1541,7 +1996,7 @@
               "Position": {
                 "x": 0,
                 "y": 0,
-                "z": 27.55
+                "z": 28
               },
               "Rect": {
                 "Direction": {
@@ -1549,43 +2004,121 @@
                   "y": 0
                 },
                 "Width": 10,
-                "Height": 5
+                "Height": 1
               },
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 21,
+              "CommandID": "21",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_ForceIdle_B_3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 1.31,
+                "y": 0,
+                "z": 38.27
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "IsForceIdleOn": true,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_ForceIdle_B_4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": -1.24,
+                "y": 0,
+                "z": 38.54
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "IsForceIdleOn": true,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
@@ -1596,10 +2129,10 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 4500,
+              "TriggerRateUnder": 3000,
               "TriggerRateOver": -9999999,
               "TriggerMaxCount": 1,
-              "ConditionID": 991
+              "ConditionID": "991"
             }
           ],
           "Commands": [
@@ -1608,23 +2141,23 @@
               "EmojiEvent": 9,
               "LoopCount": 50,
               "IsPlay": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 2,
-              "CommandID": 0,
+              "Milliseconds": 4000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "PointCommandID": 8513,
+              "PointCommandID": "8513",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
@@ -1632,14 +2165,14 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
@@ -1650,10 +2183,10 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 4500,
+              "TriggerRateUnder": 3000,
               "TriggerRateOver": -9999999,
               "TriggerMaxCount": 1,
-              "ConditionID": 992
+              "ConditionID": "992"
             }
           ],
           "Commands": [
@@ -1662,23 +2195,23 @@
               "EmojiEvent": 9,
               "LoopCount": 50,
               "IsPlay": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 2,
-              "CommandID": 0,
+              "Milliseconds": 4000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "PointCommandID": 8523,
+              "PointCommandID": "8523",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
@@ -1686,14 +2219,14 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -1704,10 +2237,10 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 6000,
+              "TriggerRateUnder": 5000,
               "TriggerRateOver": -9999999,
               "TriggerMaxCount": 1,
-              "ConditionID": 993
+              "ConditionID": "993"
             }
           ],
           "Commands": [
@@ -1716,23 +2249,23 @@
               "EmojiEvent": 9,
               "LoopCount": 50,
               "IsPlay": true,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 2,
-              "CommandID": 0,
+              "Milliseconds": 4000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "PointCommandID": 8533,
+              "PointCommandID": "8533",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             },
             {
@@ -1740,14 +2273,14 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": false,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             }
           ]
@@ -1758,10 +2291,10 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 6000,
+              "TriggerRateUnder": 5000,
               "TriggerRateOver": -9999999,
               "TriggerMaxCount": 1,
-              "ConditionID": 994
+              "ConditionID": "994"
             }
           ],
           "Commands": [
@@ -1770,23 +2303,23 @@
               "EmojiEvent": 9,
               "LoopCount": 50,
               "IsPlay": true,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Seconds": 2,
-              "CommandID": 0,
+              "Milliseconds": 4000,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": false,
               "IsInterruptCurrentAction": false,
-              "PointCommandID": 8543,
+              "PointCommandID": "8543",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             },
             {
@@ -1794,14 +2327,14 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": false,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
@@ -1812,15 +2345,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -3.08,
+                "x": -2.33,
                 "y": 0,
-                "z": 64.09
+                "z": 64.40001
               },
               "Rect": {
                 "Direction": {
@@ -1833,14 +2366,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
@@ -1851,15 +2384,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -1.52,
+                "x": -0.77,
                 "y": 0,
-                "z": 64.01999
+                "z": 64.33
               },
               "Rect": {
                 "Direction": {
@@ -1872,14 +2405,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -1890,9 +2423,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -1911,14 +2444,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             }
           ]
@@ -1929,9 +2462,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -1950,33 +2483,33 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_ForceIdle_C_3",
+          "EventName": "Boss_EmojiEnd_B_1",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 0,
               "StayTime": 0,
               "Position": {
-                "x": 1.34,
+                "x": -2.364,
                 "y": 0,
-                "z": 38.21
+                "z": 35.339
               },
               "Rect": {
                 "Direction": {
@@ -1989,33 +2522,42 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
-              "IsForceIdleOn": true,
-              "CommandID": 53,
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_ForceIdle_C_4",
+          "EventName": "Boss_EmojiEnd_B_2",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 0,
               "StayTime": 0,
               "Position": {
-                "x": -1.34,
+                "x": 1.95,
                 "y": 0,
-                "z": 37.89
+                "z": 35.1149979
               },
               "Rect": {
                 "Direction": {
@@ -2028,14 +2570,23 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
-              "IsForceIdleOn": true,
-              "CommandID": 54,
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -2046,15 +2597,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 3
+              "ConditionID": "3"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 20000,
+              "CoolDownInMilliSeconds": 30000,
               "SyncUseSkillGroupId": 9999,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
@@ -2062,7 +2613,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5551,
+              "CommandID": "5551",
               "WaitExecuteEnd": false
             },
             {
@@ -2070,7 +2621,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5552,
+              "CommandID": "5552",
               "WaitExecuteEnd": false
             },
             {
@@ -2078,7 +2629,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5553,
+              "CommandID": "5553",
               "WaitExecuteEnd": false
             },
             {
@@ -2086,7 +2637,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5554,
+              "CommandID": "5554",
               "WaitExecuteEnd": false
             },
             {
@@ -2094,7 +2645,373 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5555,
+              "CommandID": "5555",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_EmojiEnd_B_3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 1.31,
+                "y": 0,
+                "z": 38.27
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_EmojiEnd_B_4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": -1.24,
+                "y": 0,
+                "z": 38.54
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_EmojiEnd_D_1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": -2.33,
+                "y": 0,
+                "z": 64.40001
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_EmojiEnd_D_2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": -0.77,
+                "y": 0,
+                "z": 64.33
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_EmojiEnd_D_3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0.953000069,
+                "y": 0,
+                "z": 65.1300049
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_EmojiEnd_D_4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 2.65,
+                "y": 0,
+                "z": 65.1300049
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+              "EmojiEvent": 9,
+              "LoopCount": 0,
+              "IsPlay": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneConcentratedTarget",
+              "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_ForceIdle_B_11",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": -2.364,
+                "y": 0,
+                "z": 35.339
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "IsForceIdleOn": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Boss_ForceIdle_B_22",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 1.95,
+                "y": 0,
+                "z": 35.1149979
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "IsForceIdleOn": true,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -2109,9 +3026,9 @@
             "z": 31.06
           },
           "Forward": {
-            "x": 0.146272227,
+            "x": 0.146277413,
             "y": 0,
-            "z": 0.9892444
+            "z": 0.9892436
           },
           "ActiveEnemyPointIndices": [
             1
@@ -2153,9 +3070,9 @@
             "z": 34.16
           },
           "Forward": {
-            "x": 0.14074485,
+            "x": 0.140750051,
             "y": 0,
-            "z": 0.9900459
+            "z": 0.9900452
           },
           "ActiveEnemyPointIndices": [
             1
@@ -2175,9 +3092,9 @@
             "z": 41.1400032
           },
           "Forward": {
-            "x": 0.147656083,
+            "x": 0.147661269,
             "y": 0,
-            "z": 0.989038765
+            "z": 0.989038
           },
           "ActiveEnemyPointIndices": [
             1
@@ -2197,9 +3114,9 @@
             "z": 41.4400024
           },
           "Forward": {
-            "x": 0.275488079,
+            "x": 0.275493115,
             "y": 0,
-            "z": 0.9613045
+            "z": 0.961303055
           },
           "ActiveEnemyPointIndices": [
             1
@@ -2219,7 +3136,7 @@
             "z": 42.1
           },
           "Forward": {
-            "x": -0.118404463,
+            "x": -0.118404485,
             "y": 0,
             "z": 0.99296546
           },
@@ -2263,9 +3180,9 @@
             "z": 25.67
           },
           "Forward": {
-            "x": 0.2826948,
+            "x": 0.2826998,
             "y": 0,
-            "z": 0.9592099
+            "z": 0.9592084
           },
           "ActiveEnemyPointIndices": [
             1
@@ -2285,9 +3202,9 @@
             "z": 35.4899979
           },
           "Forward": {
-            "x": 0.0474623553,
+            "x": 0.0474792644,
             "y": 0,
-            "z": -0.998873055
+            "z": -0.9988722
           },
           "ActiveEnemyPointIndices": [
             0
@@ -2313,18 +3230,18 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                921
+                "921"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 42,
-              "TileY": 204,
+              "TileX": 54,
+              "TileY": 206,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.34,
-                "y": 36.37
+                "x": 2.86,
+                "y": 36.78
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2332,7 +3249,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2348,18 +3265,18 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                921
+                "921"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
               "TileX": 40,
-              "TileY": 195,
+              "TileY": 206,
               "PositionHeight": 0,
               "Position": {
                 "x": 0.01,
-                "y": 34.53
+                "y": 36.67
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2367,7 +3284,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2377,24 +3294,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
+                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                921
+                "921"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 46,
-              "TileY": 196,
+              "TileX": 45,
+              "TileY": 188,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.1455127,
-                "y": 34.6598663
+                "x": 0.99,
+                "y": 33.0100021
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2402,7 +3319,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2412,24 +3329,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
+                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
                 "AIId": 0,
                 "AppearAction": true
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                921
+                "921"
               ],
               "SpawnCommandIdList": [
-                21
+                "21"
               ],
               "MovePoints": [],
-              "TileX": 25,
-              "TileY": 198,
+              "TileX": 32,
+              "TileY": 188,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.985,
-                "y": 35.163002
+                "x": -1.55,
+                "y": 33.17
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2437,42 +3354,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                21
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": true
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                921
-              ],
-              "SpawnCommandIdList": [
-                21
-              ],
-              "MovePoints": [],
-              "TileX": 53,
-              "TileY": 202,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 2.66,
-                "y": 35.97
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                21
+                "21"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2493,20 +3375,20 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                994,
-                932
+                "994",
+                "932"
               ],
               "SpawnCommandIdList": [
-                5554,
-                54
+                "54",
+                "5554"
               ],
               "MovePoints": [],
-              "TileX": 33,
-              "TileY": 212,
+              "TileX": 34,
+              "TileY": 215,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.30111563,
-                "y": 37.9210129
+                "x": -1.20811558,
+                "y": 38.5510139
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2514,7 +3396,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                54
+                "54"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2530,12 +3412,12 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                993,
-                932
+                "993",
+                "932"
               ],
               "SpawnCommandIdList": [
-                5553,
-                53
+                "53",
+                "5553"
               ],
               "MovePoints": [],
               "TileX": 47,
@@ -2551,7 +3433,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                53
+                "53"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2575,11 +3457,11 @@
               "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 50,
-              "TileY": 222,
+              "TileY": 198,
               "PositionHeight": 0,
               "Position": {
                 "x": 1.97,
-                "y": 39.85
+                "y": 35.1449966
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2587,7 +3469,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                8521
+                "8521"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2605,12 +3487,12 @@
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 34,
-              "TileY": 222,
+              "TileX": 28,
+              "TileY": 199,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.247,
-                "y": 39.811
+                "x": -2.364,
+                "y": 35.369
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2618,7 +3500,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                8511
+                "8511"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2643,14 +3525,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 4
+              "ConditionID": "4"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 22,
+              "CommandID": "22",
               "WaitExecuteEnd": false
             }
           ]
@@ -2661,15 +3543,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -3.08,
+                "x": -2.33,
                 "y": 0,
-                "z": 64.09
+                "z": 64.40001
               },
               "Rect": {
                 "Direction": {
@@ -2682,14 +3564,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
@@ -2700,15 +3582,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -1.52,
+                "x": -0.77,
                 "y": 0,
-                "z": 64.01999
+                "z": 64.33
               },
               "Rect": {
                 "Direction": {
@@ -2721,14 +3603,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -2739,9 +3621,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -2760,14 +3642,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             }
           ]
@@ -2778,9 +3660,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -2799,14 +3681,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
@@ -2817,15 +3699,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -3.08,
+                "x": -2.33,
                 "y": 0,
-                "z": 64.09
+                "z": 64.40001
               },
               "Rect": {
                 "Direction": {
@@ -2838,7 +3720,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -2847,14 +3729,14 @@
               "EmojiEvent": 9,
               "LoopCount": 0,
               "IsPlay": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
@@ -2865,15 +3747,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -1.52,
+                "x": -0.77,
                 "y": 0,
-                "z": 64.01999
+                "z": 64.33
               },
               "Rect": {
                 "Direction": {
@@ -2886,7 +3768,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -2895,14 +3777,14 @@
               "EmojiEvent": 9,
               "LoopCount": 0,
               "IsPlay": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -2913,9 +3795,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -2934,7 +3816,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -2943,14 +3825,14 @@
               "EmojiEvent": 9,
               "LoopCount": 0,
               "IsPlay": false,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": false,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             }
           ]
@@ -2961,9 +3843,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -2982,7 +3864,7 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
@@ -2991,14 +3873,14 @@
               "EmojiEvent": 9,
               "LoopCount": 0,
               "IsPlay": false,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": false,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
@@ -3012,59 +3894,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_SR_M_WEEK",
+                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
                 "AIId": 0,
                 "AppearAction": false
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                922
+                "922"
               ],
               "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
-              "TileX": 40,
-              "TileY": 240,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0,
-                "y": 43.5
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                22
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_SR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                922
-              ],
-              "SpawnCommandIdList": [
-                22
-              ],
-              "MovePoints": [],
-              "TileX": 53,
+              "TileX": 34,
               "TileY": 239,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.69,
-                "y": 43.39
+                "x": -1.19,
+                "y": 43.36
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -3072,7 +3919,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -3082,59 +3929,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
+                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
                 "AIId": 0,
                 "AppearAction": false
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                922
+                "922"
               ],
               "SpawnCommandIdList": [
-                22
-              ],
-              "MovePoints": [],
-              "TileX": 27,
-              "TileY": 223,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -2.53,
-                "y": 40
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                22
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                922
-              ],
-              "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
               "TileX": 43,
-              "TileY": 222,
+              "TileY": 241,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.63,
-                "y": 39.97
+                "x": 0.6,
+                "y": 43.65
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -3142,7 +3954,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -3152,24 +3964,24 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
+                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
                 "AIId": 0,
                 "AppearAction": false
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                922
+                "922"
               ],
               "SpawnCommandIdList": [
-                22
+                "22"
               ],
               "MovePoints": [],
-              "TileX": 55,
-              "TileY": 222,
+              "TileX": 29,
+              "TileY": 234,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.93,
-                "y": 39.86
+                "x": -2.3,
+                "y": 42.3099976
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -3177,7 +3989,42 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                22
+                "22"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "922"
+              ],
+              "SpawnCommandIdList": [
+                "22"
+              ],
+              "MovePoints": [],
+              "TileX": 57,
+              "TileY": 237,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.47,
+                "y": 42.98
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "22"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -3188,132 +4035,7 @@
         },
         {
           "GroupName": "MovePoint_C",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 27,
-              "TileY": 244,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -2.674,
-                "y": 44.269
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                8512
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 31,
-              "TileY": 250,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -1.724,
-                "y": 45.48
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                8522
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 50,
-              "TileY": 250,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.954,
-                "y": 45.5
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                8532
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 55,
-              "TileY": 246,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 3.07099986,
-                "y": 44.6299973
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                8542
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
+          "SpawnPoints": []
         }
       ]
     },
@@ -3331,15 +4053,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -3.08,
+                "x": -2.33,
                 "y": 0,
-                "z": 64.09
+                "z": 64.40001
               },
               "Rect": {
                 "Direction": {
@@ -3352,14 +4074,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
@@ -3370,15 +4092,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": -1.52,
+                "x": -0.77,
                 "y": 0,
-                "z": 64.01999
+                "z": 64.33
               },
               "Rect": {
                 "Direction": {
@@ -3391,14 +4113,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             }
           ]
@@ -3409,9 +4131,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -3430,14 +4152,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             }
           ]
@@ -3448,9 +4170,9 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
               "Shape": 0,
-              "Target": 1,
+              "Target": 3,
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
@@ -3469,14 +4191,14 @@
               "Circle": {
                 "Radius": 1
               },
-              "ConditionID": 0
+              "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
@@ -3486,207 +4208,40 @@
           "Operator": 0,
           "Conditions": [
             {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 51
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            },
+            {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 5
+              "ConditionID": "5"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": 31,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Boss_EmojiEnd_D_1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
-              "Shape": 0,
-              "Target": 1,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": -3.08,
-                "y": 0,
-                "z": 64.09
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 1,
-                "Height": 1
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "ConditionID": 0
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
-              "EmojiEvent": 9,
-              "LoopCount": 0,
-              "IsPlay": false,
-              "CommandID": 51,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
-              "heroStatus": "ImmuneConcentratedTarget",
-              "isAdd": false,
-              "CommandID": 51,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Boss_EmojiEnd_D_2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
-              "Shape": 0,
-              "Target": 1,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": -1.52,
-                "y": 0,
-                "z": 64.01999
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 1,
-                "Height": 1
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "ConditionID": 0
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
-              "EmojiEvent": 9,
-              "LoopCount": 0,
-              "IsPlay": false,
-              "CommandID": 52,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
-              "heroStatus": "ImmuneConcentratedTarget",
-              "isAdd": false,
-              "CommandID": 52,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Boss_EmojiEnd_D_3",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
-              "Shape": 0,
-              "Target": 1,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0.953000069,
-                "y": 0,
-                "z": 65.1300049
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 1,
-                "Height": 1
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "ConditionID": 0
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
-              "EmojiEvent": 9,
-              "LoopCount": 0,
-              "IsPlay": false,
-              "CommandID": 53,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
-              "heroStatus": "ImmuneConcentratedTarget",
-              "isAdd": false,
-              "CommandID": 53,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Boss_EmojiEnd_D_4",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "CharacterId": 0,
-              "Shape": 0,
-              "Target": 1,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 2.65,
-                "y": 0,
-                "z": 65.1300049
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 1,
-                "Height": 1
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "ConditionID": 0
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
-              "EmojiEvent": 9,
-              "LoopCount": 0,
-              "IsPlay": false,
-              "CommandID": 54,
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
-              "heroStatus": "ImmuneConcentratedTarget",
-              "isAdd": false,
-              "CommandID": 54,
+              "CommandID": "31",
               "WaitExecuteEnd": false
             }
           ]
@@ -3723,7 +4278,7 @@
             "z": 47.46
           },
           "Forward": {
-            "x": -0.425779372,
+            "x": -0.4257794,
             "y": 0,
             "z": 0.904827
           },
@@ -3767,7 +4322,7 @@
             "z": 49.96
           },
           "Forward": {
-            "x": -0.0462350771,
+            "x": -0.0462352633,
             "y": 0,
             "z": 0.9989306
           },
@@ -3789,9 +4344,9 @@
             "z": 53.78
           },
           "Forward": {
-            "x": 0.0776156262,
+            "x": 0.07761895,
             "y": 0,
-            "z": 0.996983349
+            "z": 0.9969831
           },
           "ActiveEnemyPointIndices": [
             1
@@ -3811,9 +4366,9 @@
             "z": 53.78
           },
           "Forward": {
-            "x": 0.0776156262,
+            "x": 0.07761895,
             "y": 0,
-            "z": 0.996983349
+            "z": 0.9969831
           },
           "ActiveEnemyPointIndices": [
             1
@@ -3833,9 +4388,9 @@
             "z": 58.5
           },
           "Forward": {
-            "x": 0.2972335,
+            "x": 0.297236681,
             "y": 0,
-            "z": 0.954804838
+            "z": 0.9548038
           },
           "ActiveEnemyPointIndices": [
             1
@@ -3855,7 +4410,7 @@
             "z": 50.53
           },
           "Forward": {
-            "x": -0.0462350771,
+            "x": -0.0462352633,
             "y": 0,
             "z": 0.9989306
           },
@@ -3877,7 +4432,7 @@
             "z": 57.46
           },
           "Forward": {
-            "x": -0.0462350771,
+            "x": -0.0462352633,
             "y": 0,
             "z": 0.9989306
           },
@@ -3899,7 +4454,7 @@
             "z": 57.83
           },
           "Forward": {
-            "x": -0.0462350771,
+            "x": -0.0462352633,
             "y": 0,
             "z": 0.9989306
           },
@@ -3927,18 +4482,18 @@
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                931
+                "931"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
-              "TileX": 35,
-              "TileY": 294,
+              "TileX": 47,
+              "TileY": 303,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.06604707,
-                "y": 54.2734947
+                "x": 1.38,
+                "y": 56.08
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -3946,7 +4501,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -3962,18 +4517,18 @@
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                931
+                "931"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
-              "TileX": 25,
-              "TileY": 305,
+              "TileX": 24,
+              "TileY": 303,
               "PositionHeight": 0,
               "Position": {
-                "x": -3.09000015,
-                "y": 56.58
+                "x": -3.24,
+                "y": 56.15
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -3981,7 +4536,42 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
+                "31"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Kaiserpmc_SG_M_WEEK",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "931"
+              ],
+              "SpawnCommandIdList": [
+                "31"
+              ],
+              "MovePoints": [],
+              "TileX": 43,
+              "TileY": 287,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.57,
+                "y": 52.93
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -3997,52 +4587,17 @@
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
-                931
+                "931"
               ],
               "SpawnCommandIdList": [
-                31
+                "31"
               ],
               "MovePoints": [],
-              "TileX": 49,
-              "TileY": 296,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.78,
-                "y": 54.6
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                31
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": true
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                931
-              ],
-              "SpawnCommandIdList": [
-                31
-              ],
-              "MovePoints": [],
-              "TileX": 31,
+              "TileX": 38,
               "TileY": 301,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.77,
+                "x": -0.44,
                 "y": 55.75
               },
               "Direction": {
@@ -4051,42 +4606,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                31
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": true
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                931
-              ],
-              "SpawnCommandIdList": [
-                31
-              ],
-              "MovePoints": [],
-              "TileX": 40,
-              "TileY": 314,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -0.07,
-                "y": 58.25
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                31
+                "31"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4111,14 +4631,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 6
+              "ConditionID": "6"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 32,
+              "CommandID": "32",
               "WaitExecuteEnd": false
             }
           ]
@@ -4129,14 +4649,14 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 6
+              "ConditionID": "6"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
-              "CommandID": 55,
+              "CommandID": "55",
               "WaitExecuteEnd": false
             }
           ]
@@ -4147,32 +4667,32 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 6
+              "ConditionID": "6"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 51,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 52,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 53,
+              "CommandID": "53",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
-              "CommandID": 54,
+              "CommandID": "54",
               "WaitExecuteEnd": false
             }
           ]
@@ -4183,15 +4703,15 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": 6
+              "ConditionID": "6"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 20000,
+              "CoolDownInMilliSeconds": 30000,
               "SyncUseSkillGroupId": 9999,
-              "CommandID": 0,
+              "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
@@ -4199,7 +4719,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5551,
+              "CommandID": "5551",
               "WaitExecuteEnd": false
             },
             {
@@ -4207,7 +4727,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5552,
+              "CommandID": "5552",
               "WaitExecuteEnd": false
             },
             {
@@ -4215,7 +4735,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5553,
+              "CommandID": "5553",
               "WaitExecuteEnd": false
             },
             {
@@ -4223,7 +4743,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5554,
+              "CommandID": "5554",
               "WaitExecuteEnd": false
             },
             {
@@ -4231,31 +4751,7 @@
               "SyncUseSkillGroupId": 9999,
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
-              "CommandID": 5555,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "EndBattle",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 932
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "ConditionID": 32
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
-              "BattleEndType": 4,
-              "CommandID": 99,
+              "CommandID": "5555",
               "WaitExecuteEnd": false
             }
           ]
@@ -4275,28 +4771,28 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                32
+                "32"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 52,
-              "TileY": 335,
+              "TileX": 40,
+              "TileY": 334,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.33,
-                "y": 62.43
+                "x": 0.01,
+                "y": 62.3799973
               },
               "Direction": {
                 "x": -8.742278e-08,
                 "y": -1
               },
               "ConditionIdList": [
-                32
+                "32"
               ],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4312,54 +4808,54 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                32
+                "32"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
+              ],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.87,
+                "y": 61.91
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [
+                "32"
+              ],
+              "CommandIdList": [
+                "32"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "32"
+              ],
+              "SpawnCommandIdList": [
+                "32"
               ],
               "MovePoints": [],
               "TileX": 25,
-              "TileY": 335,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -2.91,
-                "y": 62.45
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [
-                32
-              ],
-              "CommandIdList": [
-                32
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                32
-              ],
-              "SpawnCommandIdList": [
-                32
-              ],
-              "MovePoints": [],
-              "TileX": 56,
               "TileY": 327,
               "PositionHeight": 0,
               "Position": {
-                "x": 3.26,
+                "x": -2.93,
                 "y": 60.8
               },
               "Direction": {
@@ -4367,10 +4863,10 @@
                 "y": -1
               },
               "ConditionIdList": [
-                32
+                "32"
               ],
               "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4386,65 +4882,28 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                32
+                "32"
               ],
               "SpawnCommandIdList": [
-                32
+                "32"
               ],
               "MovePoints": [],
-              "TileX": 34,
-              "TileY": 329,
+              "TileX": 49,
+              "TileY": 328,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.29154456,
-                "y": 61.2398872
+                "x": 1.82,
+                "y": 61.09
               },
               "Direction": {
                 "x": -8.742278e-08,
                 "y": -1
               },
               "ConditionIdList": [
-                32
+                "32"
               ],
               "CommandIdList": [
-                32
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Soldier_Kaiserpmc_AR_M_WEEK",
-                "AIId": 0,
-                "AppearAction": false
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                32
-              ],
-              "SpawnCommandIdList": [
-                32
-              ],
-              "MovePoints": [],
-              "TileX": 44,
-              "TileY": 337,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0.81,
-                "y": 62.9400024
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [
-                32
-              ],
-              "CommandIdList": [
-                32
+                "32"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4465,12 +4924,12 @@
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
-                995,
-                932
+                "995",
+                "932"
               ],
               "SpawnCommandIdList": [
-                55,
-                5555
+                "55",
+                "5555"
               ],
               "MovePoints": [],
               "TileX": 40,
@@ -4486,7 +4945,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                55
+                "55"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4509,12 +4968,12 @@
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 25,
-              "TileY": 343,
+              "TileX": 28,
+              "TileY": 344,
               "PositionHeight": 0,
               "Position": {
-                "x": -3.09399986,
-                "y": 64.032
+                "x": -2.34399986,
+                "y": 64.34201
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -4522,7 +4981,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                8513
+                "8513"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4540,12 +4999,12 @@
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 32,
-              "TileY": 343,
+              "TileX": 36,
+              "TileY": 344,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.54399991,
-                "y": 64.00299
+                "x": -0.79399997,
+                "y": 64.313
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -4553,7 +5012,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                8523
+                "8523"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4584,7 +5043,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                8533
+                "8533"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4615,7 +5074,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                8543
+                "8543"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4679,7 +5138,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 50.67
+        "y": 57.99
       },
       "Forward": {
         "x": 0,
@@ -4694,7 +5153,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 57.01
+        "y": 60.58
       },
       "Forward": {
         "x": 0,
@@ -4709,7 +5168,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 61.58
+        "y": 63.1
       },
       "Forward": {
         "x": 0,
@@ -4724,7 +5183,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 65.72
+        "y": 65.8
       },
       "Forward": {
         "x": 0,
@@ -4734,5 +5193,103 @@
       "IsEnemy": false
     }
   ],
-  "EnemyFormations": []
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 13
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 20
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 33
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 40
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 53
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-2Area",
+      "Radius": 1500,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 57
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
 }
