@@ -72,7 +72,7 @@
       "PurchaseCooltimeMin": 0,
       "PurchaseCountLimit": 0,
       "PurchaseCountResetType": "None",
-      "ProbabilityUrlDev": "https://m.nexon.com/probability/2594?client_id=MjcwNg&language=",
+      "ProbabilityUrlDev": "https://m.nexon.com/probability/2624?client_id=MjcwOA&language=",
       "ProbabilityUrlLive": "https://m.nexon.com/probability/2624?client_id=MjcwOA&language="
     },
     {
@@ -101,8 +101,88 @@
       "PurchaseCooltimeMin": 0,
       "PurchaseCountLimit": 0,
       "PurchaseCountResetType": "None",
-      "ProbabilityUrlDev": "https://m.nexon.com/probability/2566?client_id=MjcwNg&language=",
+      "ProbabilityUrlDev": "https://m.nexon.com/probability/2623?client_id=MjcwOA&language=",
       "ProbabilityUrlLive": "https://m.nexon.com/probability/2623?client_id=MjcwOA&language="
+    },
+    {
+      "Id": 90050004,
+      "CategoryType": "NormalGacha",
+      "IsLegacy": false,
+      "GoodsId": [
+        90030002,
+        90030003
+      ],
+      "GoodsDevName": null,
+      "DisplayOrder": 30,
+      "MovieBannerPath": [
+        "Gacha_Banner_Normal_gb.mp4"
+      ],
+      "LinkedRobbyBannerId": 14,
+      "InfoCharacterId": [],
+      "SalePeriodFrom": "11/16/2021 12:30:00",
+      "SalePeriodTo": "11/29/2021 12:00:00",
+      "RecruitCoinId": 90070001,
+      "RecruitSellectionShopId": 90010001,
+      "PurchaseCooltimeMin": 0,
+      "PurchaseCountLimit": 0,
+      "PurchaseCountResetType": "None",
+      "ProbabilityUrlDev": "https://m.nexon.com/probability/2624?client_id=MjcwOA&language=",
+      "ProbabilityUrlLive": "https://m.nexon.com/probability/2624?client_id=MjcwOA&language="
+    },
+    {
+      "Id": 90050005,
+      "CategoryType": "PickupGacha",
+      "IsLegacy": false,
+      "GoodsId": [
+        90035002,
+        90035003
+      ],
+      "GoodsDevName": null,
+      "DisplayOrder": 10,
+      "MovieBannerPath": [
+        "Gacha_Banner_211116_gb_1.mp4",
+        ""
+      ],
+      "LinkedRobbyBannerId": 16,
+      "InfoCharacterId": [
+        20003
+      ],
+      "SalePeriodFrom": "11/16/2021 12:30:00",
+      "SalePeriodTo": "11/29/2021 12:00:00",
+      "RecruitCoinId": 90070001,
+      "RecruitSellectionShopId": 90010001,
+      "PurchaseCooltimeMin": 0,
+      "PurchaseCountLimit": 0,
+      "PurchaseCountResetType": "None",
+      "ProbabilityUrlDev": "https://m.nexon.com/probability/2623?client_id=MjcwOA&language=",
+      "ProbabilityUrlLive": "https://m.nexon.com/probability/2623?client_id=MjcwOA&language="
+    },
+    {
+      "Id": 90050006,
+      "CategoryType": "PickupGacha",
+      "IsLegacy": false,
+      "GoodsId": [
+        90035004,
+        90035005
+      ],
+      "GoodsDevName": null,
+      "DisplayOrder": 20,
+      "MovieBannerPath": [
+        "Gacha_Banner_211116_gb_2.mp4"
+      ],
+      "LinkedRobbyBannerId": 17,
+      "InfoCharacterId": [
+        10000
+      ],
+      "SalePeriodFrom": "11/16/2021 12:30:00",
+      "SalePeriodTo": "11/29/2021 12:00:00",
+      "RecruitCoinId": 90070001,
+      "RecruitSellectionShopId": 90010001,
+      "PurchaseCooltimeMin": 0,
+      "PurchaseCountLimit": 0,
+      "PurchaseCountResetType": "None",
+      "ProbabilityUrlDev": "https://m.nexon.com/probability/2706?client_id=MjcwOA&language=",
+      "ProbabilityUrlLive": "https://m.nexon.com/probability/2706?client_id=MjcwOA&language="
     },
     {
       "Id": 90060000,
@@ -119,13 +199,13 @@
       "LinkedRobbyBannerId": 66,
       "InfoCharacterId": [],
       "SalePeriodFrom": "11/09/2021 00:00:00",
-      "SalePeriodTo": "12/07/2021 12:00:00",
-      "RecruitCoinId": 90070000,
-      "RecruitSellectionShopId": 90010000,
+      "SalePeriodTo": "12/14/2021 12:00:00",
+      "RecruitCoinId": 90070001,
+      "RecruitSellectionShopId": 90010001,
       "PurchaseCooltimeMin": 0,
       "PurchaseCountLimit": 0,
       "PurchaseCountResetType": "None",
-      "ProbabilityUrlDev": "https://m.nexon.com/probability/2612?client_id=MjcwNg&language=",
+      "ProbabilityUrlDev": "https://m.nexon.com/probability/2625?client_id=MjcwOA&language=",
       "ProbabilityUrlLive": "https://m.nexon.com/probability/2625?client_id=MjcwOA&language="
     }
   ]
